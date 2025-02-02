@@ -47,6 +47,15 @@ nav a:hover {
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
     position: relative;
+    width: 100%;
+    max-height: 600px;
+}
+
+@media (max-width: 768px) {
+    .hero {
+        height: 60vh;
+        background-size: contain;
+    }
 }
 
 .hero-content {
