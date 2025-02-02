@@ -8,19 +8,23 @@ body {
     text-align: center;
 }
 
-/* Hero Section */
+/* Hero Section with Banner Image */
 .hero {
-    background: linear-gradient(to bottom, #2e7d32, #66bb6a);
+    background: url('banner.png') no-repeat center center/cover;
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .hero-content {
     max-width: 600px;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
 }
 
 .hero h1 {
@@ -46,20 +50,32 @@ body {
     background: #1B5E20;
 }
 
-/* Sections */
-.about, .blog-preview {
+/* About Section with Profile Photo */
+.about {
     padding: 50px 20px;
     max-width: 800px;
     margin: auto;
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about img {
+    content: url('profile.png');
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
 }
 
 h2 {
     color: #1B5E20;
 }
 
+/* Blog Section */
 .blog-list {
     display: flex;
     flex-direction: column;
@@ -78,6 +94,35 @@ h2 {
 
 .blog-item:hover {
     background: #81C784;
+}
+
+/* Social Media Links */
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: white;
+    background: #388E3C;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 5px;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    background: #1B5E20;
+}
+
+/* CV Section */
+.cv-section {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 footer {
