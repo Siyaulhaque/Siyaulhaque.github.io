@@ -3,20 +3,20 @@ body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f5f5f5;
-    color: #333;
+    background-color: #eef5e5;
+    color: #2c3e50;
     text-align: center;
 }
 
 /* Hero Section */
 .hero {
-    background: url('https://source.unsplash.com/1600x900/?nature,forest') no-repeat center center/cover;
+    background: linear-gradient(to bottom, #2e7d32, #66bb6a);
     height: 90vh;
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content {
@@ -33,7 +33,7 @@ body {
 }
 
 .btn {
-    background: #4CAF50;
+    background: #388E3C;
     color: white;
     padding: 10px 20px;
     text-decoration: none;
@@ -43,7 +43,7 @@ body {
 }
 
 .btn:hover {
-    background: #388E3C;
+    background: #1B5E20;
 }
 
 /* Sections */
@@ -51,6 +51,13 @@ body {
     padding: 50px 20px;
     max-width: 800px;
     margin: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #1B5E20;
 }
 
 .blog-list {
@@ -60,20 +67,21 @@ body {
 }
 
 .blog-item {
-    background: #fff;
+    background: #A5D6A7;
     padding: 15px;
     border-radius: 5px;
     text-decoration: none;
-    color: #333;
+    color: #2c3e50;
     transition: 0.3s;
+    font-weight: bold;
 }
 
 .blog-item:hover {
-    background: #ddd;
+    background: #81C784;
 }
 
 footer {
-    background: #222;
+    background: #2E7D32;
     color: white;
     padding: 10px;
     margin-top: 20px;
