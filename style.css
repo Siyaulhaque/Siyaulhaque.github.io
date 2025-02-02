@@ -1,0 +1,80 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+    color: #333;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero {
+    background: url('https://source.unsplash.com/1600x900/?nature,forest') no-repeat center center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.btn {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+.btn:hover {
+    background: #388E3C;
+}
+
+/* Sections */
+.about, .blog-preview {
+    padding: 50px 20px;
+    max-width: 800px;
+    margin: auto;
+}
+
+.blog-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.blog-item {
+    background: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    transition: 0.3s;
+}
+
+.blog-item:hover {
+    background: #ddd;
+}
+
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
+}
