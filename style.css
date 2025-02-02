@@ -8,6 +8,35 @@ body {
     text-align: center;
 }
 
+/* Header Navigation with Green Switches */
+header {
+    background: #2E7D32;
+    padding: 15px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav a {
+    background: #388E3C;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 25px; /* More rounded for switch effect */
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+nav a:hover {
+    background: #1B5E20;
+    transform: scale(1.05); /* Slight pop effect */
+}
+
 /* Hero Section with Banner Image */
 .hero {
     background: url('banner.png') no-repeat center center/cover;
@@ -69,6 +98,23 @@ body {
     height: 150px;
     border-radius: 50%;
     margin-bottom: 15px;
+}
+
+.about .btn {
+    background: #388E3C;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.about .btn:hover {
+    background: #1B5E20;
+    transform: scale(1.05);
 }
 
 h2 {
