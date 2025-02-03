@@ -11,13 +11,14 @@ body {
 /* Sidebar Styles */
 #sidebar {
     position: fixed;
-    left: -250px;
     top: 0;
+    left: -250px;
     width: 250px;
     height: 100%;
     background: #333;
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
+    z-index: 1100;
 }
 
 #sidebar.active {
@@ -39,6 +40,7 @@ body {
     display: block;
 }
 
+/* Sidebar Toggle Button */
 #sidebar-icon {
     position: fixed;
     top: 20px;
@@ -49,14 +51,15 @@ body {
     color: white;
     padding: 10px;
     border-radius: 5px;
-    z-index: 1000;
+    z-index: 1200;
 }
-
 
 /* Header Navigation with Green Switches */
 header {
     background: #2E7D32;
     padding: 15px 0;
+    z-index: 100;
+    position: relative;
 }
 
 nav {
@@ -70,7 +73,7 @@ nav a {
     color: white;
     padding: 12px 25px;
     text-decoration: none;
-    border-radius: 25px; /* More rounded for switch effect */
+    border-radius: 25px;
     font-weight: bold;
     transition: background 0.3s, transform 0.2s;
     display: inline-block;
@@ -79,7 +82,7 @@ nav a {
 
 nav a:hover {
     background: #1B5E20;
-    transform: scale(1.05); /* Slight pop effect */
+    transform: scale(1.05);
 }
 
 /* Hero Section with Banner Image */
@@ -94,6 +97,7 @@ nav a:hover {
     position: relative;
     width: 100%;
     max-height: 600px;
+    z-index: 100;
 }
 
 @media (max-width: 768px) {
@@ -119,62 +123,6 @@ nav a:hover {
     font-size: 1.2rem;
 }
 
-.btn {
-    background: #388E3C;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-}
-
-.btn:hover {
-    background: #1B5E20;
-}
-
-/* About Section with Profile Photo */
-.about {
-    padding: 50px 20px;
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.about img {
-    content: url('page-image-elements/profile.png');
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-}
-
-.about .btn {
-    background: #388E3C;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
-    display: inline-block;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.2s;
-}
-
-.about .btn:hover {
-    background: #1B5E20;
-    transform: scale(1.05);
-}
-
-h2 {
-    color: #1B5E20;
-}
-
 /* Blog Section */
 .blog-list {
     display: flex;
@@ -196,35 +144,7 @@ h2 {
     background: #81C784;
 }
 
-/* Social Media Links */
-.social-links {
-    margin-top: 20px;
-}
-
-.social-links a {
-    text-decoration: none;
-    color: white;
-    background: #388E3C;
-    padding: 10px 15px;
-    border-radius: 5px;
-    margin: 5px;
-    display: inline-block;
-}
-
-.social-links a:hover {
-    background: #1B5E20;
-}
-
-/* CV Section */
-.cv-section {
-    padding: 50px 20px;
-    max-width: 800px;
-    margin: auto;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Footer */
 footer {
     background: #2E7D32;
     color: white;
