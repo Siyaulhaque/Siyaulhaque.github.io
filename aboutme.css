@@ -1,46 +1,103 @@
 /* About Me Page Styles */
 .about-container {
-    max-width: 800px;
+    max-width: 900px;
     margin: auto;
-    padding: 20px;
+    padding: 40px;
     text-align: center;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.about-container::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 150px;
+    height: 150px;
+    background: #A5D6A7;
+    border-radius: 50%;
+    opacity: 0.5;
 }
 
 .about-container img {
-    width: 150px;
-    height: 150px;
+    width: 180px;
+    height: 180px;
     border-radius: 50%;
     margin-bottom: 15px;
+    border: 5px solid #388E3C;
 }
 
 .about-container h2 {
     color: #1B5E20;
-    font-size: 2rem;
-    margin-bottom: 10px;
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: bold;
 }
 
 .about-container p {
-    font-size: 1.1rem;
-    color: #333;
-    line-height: 1.6;
+    font-size: 1.2rem;
+    color: #444;
+    line-height: 1.8;
+    margin-bottom: 15px;
+    max-width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.skill {
+    background: #81C784;
+    padding: 10px 15px;
+    border-radius: 25px;
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.contact-section {
+    margin-top: 30px;
+    background: #E8F5E9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section a {
+    color: #1B5E20;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.contact-section a:hover {
+    color: #388E3C;
 }
 
 .about-container .btn {
     background: #388E3C;
     color: white;
-    padding: 10px 20px;
+    padding: 12px 25px;
     text-decoration: none;
-    border-radius: 5px;
-    margin-top: 20px;
+    border-radius: 8px;
+    margin-top: 25px;
     display: inline-block;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     transition: background 0.3s, transform 0.2s;
 }
 
 .about-container .btn:hover {
     background: #1B5E20;
-    transform: scale(1.05);
+    transform: scale(1.07);
 }
