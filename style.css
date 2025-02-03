@@ -217,3 +217,24 @@ footer {
     padding: 10px;
     margin-top: 20px;
 }
+
+/* Title Entrance Scrolling Animation */
+@keyframes titleScroll {
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+    overflow: hidden;
+    display: inline-block;
+    opacity: 0;
+    animation: titleScroll 1.5s ease-out forwards;
+}
