@@ -1,3 +1,4 @@
+
 /* Sidebar Styles */
 #sidebar {
     position: fixed;
@@ -8,6 +9,7 @@
     background: #333;
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
+    z-index: 1100;
 }
 
 #sidebar.active {
@@ -29,6 +31,7 @@
     display: block;
 }
 
+/* Sidebar Toggle Button */
 #sidebar-icon {
     position: fixed;
     top: 20px;
@@ -40,4 +43,5 @@
     padding: 10px;
     border-radius: 5px;
     z-index: 1000;
+    z-index: 1200;
 }
