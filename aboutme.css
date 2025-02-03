@@ -1,0 +1,46 @@
+/* About Me Page Styles */
+.about-container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about-container img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.about-container h2 {
+    color: #1B5E20;
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.about-container p {
+    font-size: 1.1rem;
+    color: #333;
+    line-height: 1.6;
+}
+
+.about-container .btn {
+    background: #388E3C;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    display: inline-block;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.about-container .btn:hover {
+    background: #1B5E20;
+    transform: scale(1.05);
+}
