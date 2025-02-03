@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Website</title>
+    <title>Yawalhub | Home</title>
     <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="article-card.css">
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
 
@@ -55,10 +55,7 @@
                 { title: "Birdwatching in Ooty", url: "blog/blog3.html", image: "page-image-elements/banner.png", date: "2025-02-05" }
             ];
 
-            // Sort blogs by latest date
             blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
-
-            // Select the latest 3 blogs
             const latestBlogs = blogs.slice(0, 3);
 
             const articleCardsContainer = document.getElementById("articleCards");
