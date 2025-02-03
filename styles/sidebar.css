@@ -5,7 +5,7 @@
     top: 0;
     width: 250px;
     height: 100%;
-    background: #2c3e50; /* Updated sidebar color */
+    background: #2c3e50; /* Sidebar color */
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
     z-index: 1100;
@@ -14,10 +14,12 @@
     border-bottom-right-radius: 10px;
 }
 
+/* Active state - when sidebar is open */
 #sidebar.active {
     left: 0;
 }
 
+/* Sidebar Navigation List */
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -27,12 +29,13 @@
 #sidebar ul li {
     padding: 12px;
     text-align: center;
-    transition: background 0.3s;
+    transition: background 0.3s, transform 0.2s;
 }
 
 #sidebar ul li:hover {
     background: #34495e;
     border-radius: 5px;
+    transform: scale(1.05);
 }
 
 #sidebar ul li a {
@@ -41,6 +44,11 @@
     display: block;
     font-size: 1.2rem;
     font-weight: bold;
+    transition: color 0.3s;
+}
+
+#sidebar ul li a:hover {
+    color: #1abc9c;
 }
 
 /* Sidebar Toggle Button */
@@ -55,9 +63,30 @@
     padding: 10px 15px;
     border-radius: 5px;
     z-index: 1200;
-    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, background 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
+/* Shrinks button when sidebar is open */
 #sidebar.active + #sidebar-icon {
     transform: scale(0.8);
+}
+
+/* Hover Effect for Sidebar Icon */
+#sidebar-icon:hover {
+    background: #1B5E20;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 220px;
+    }
+    #sidebar ul li a {
+        font-size: 1.1rem;
+    }
+    #sidebar-icon {
+        font-size: 28px;
+        padding: 8px 12px;
+    }
 }
