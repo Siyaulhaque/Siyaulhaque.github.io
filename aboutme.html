@@ -52,20 +52,10 @@
         </div>
     </div>
 
-    <!-- JavaScript for Sidebar Toggle -->
     <script>
         document.getElementById("sidebar-icon").addEventListener("click", function () {
-            let sidebar = document.getElementById("sidebar");
-            let mainContent = document.querySelector(".main-content");
-            sidebar.classList.toggle("active");
-            mainContent.classList.toggle("sidebar-active");
-            
-            // Adjust sidebar icon position
-            if (sidebar.classList.contains("active")) {
-                this.classList.add("small");
-            } else {
-                this.classList.remove("small");
-            }
+            document.getElementById("sidebar").classList.toggle("active");
+            this.classList.toggle("small");
         });
     </script>
 </body>
