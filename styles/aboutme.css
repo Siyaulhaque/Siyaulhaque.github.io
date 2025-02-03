@@ -125,18 +125,35 @@ body {
     left: -250px;
     top: 0;
     background: #2c3e50;
-    transition: left 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
     padding-top: 20px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-    z-index: 1000;
 }
 
 #sidebar.active {
     left: 0;
 }
 
-.main-content.sidebar-active {
-    margin-left: 250px;
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 15px;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+}
+
+#sidebar ul li a:hover {
+    background: #1a252f;
+    padding: 12px;
+    border-radius: 5px;
 }
 
 #sidebar-icon {
@@ -149,12 +166,15 @@ body {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-    z-index: 1100;
+    transition: 0.3s;
 }
 
-#sidebar-icon.active {
+#sidebar-icon.small {
     left: 260px;
+}
+
+.main-content.sidebar-active {
+    margin-left: 250px;
 }
 
 /* Responsive Design */
