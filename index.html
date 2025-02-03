@@ -6,8 +6,20 @@
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="article-card.css">
+    <link rel="stylesheet" href="sidebar.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
+        <a href="index.html">Home</a>
+        <a href="aboutme.html">About</a>
+        <a href="blog/blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <button class="sidebar-icon" onclick="toggleSidebar()">&#9776;</button>
+    
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -17,7 +29,7 @@
         </div>
     </section>
     
-    <!-- Updated About Section with Link -->
+    <!-- About Section -->
     <section id="about" class="about">
         <img src="page-image-elements/profile.png" alt="Profile Picture">
         <h2>About Me</h2>
@@ -25,62 +37,15 @@
         <a href="aboutme.html" class="btn">Read More</a>
     </section>
 
-   <!-- Article Card Section -->
-<div class="record_wrap">
-    <a href="blog/blog1.html" class="record">
-        <div class="record-arrow">
-            <img src="page-image-elements/arrow.png" alt="Arrow">
-        </div>
-        <div class="record-display" style="background-image: url('page-image-elements/banner.png');">
-        </div>
-        <div class="record-desc">
-            <h1>Blog Post 1</h1>
-            <p>Brief description of the first blog post.</p>
-        </div>
-    </a>
-
-    <a href="blog/blog2.html" class="record">
-        <div class="record-arrow">
-            <img src="page-image-elements/arrow.png" alt="Arrow">
-        </div>
-        <div class="record-display" style="background-image: url('page-image-elements/article1.jpg');">
-        </div>
-        <div class="record-desc">
-            <h1>Blog Post 2</h1>
-            <p>Brief description of the second blog post.</p>
-        </div>
-    </a>
-
-    <a href="blog/blog3.html" class="record">
-        <div class="record-arrow">
-            <img src="page-image-elements/arrow.png" alt="Arrow">
-        </div>
-        <div class="record-display" style="background-image: url('page-image-elements/article2.jpg');">
-        </div>
-        <div class="record-desc">
-            <h1>Blog Post 3</h1>
-            <p>Brief description of the third blog post.</p>
-        </div>
-    </a>
-</div>
-
-
+    <!-- Dynamic Article Cards -->
+    <div class="record_wrap" id="article-container"></div>
+    
     <!-- Social Media Links -->
     <section class="social-links">
         <h2>Connect with Me</h2>
         <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
         <a href="https://linkedin.com/in/Siya Ul Haque" target="_blank">LinkedIn</a>
         <a href="https://github.com/Siyaulhaque" target="_blank">GitHub</a>
-    </section>
-
-    <!-- CV Section -->
-    <section class="cv-section">
-        <p>Download my CV below:</p>
-        <!-- Tooltip with custom text -->
-        <div class="tooltip">
-            <a href="page-image-elements/cv.pdf" class="btn" download>Download CV</a>
-            <span class="tooltiptext">Download my CV document</span>
-        </div>
     </section>
 
     <!-- Footer -->
