@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siyaulhaque | About Me</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="sidebar.css">
-    <link rel="stylesheet" href="aboutme.css"> 
+    <link rel="stylesheet" href="aboutme.css">
 </head>
 <body>
-
+    
     <!-- Sidebar Toggle Button -->
     <div id="sidebar-icon">&#9776;</div>
-
-    <!-- Sidebar -->
+    
+    <!-- Sidebar Navigation -->
     <nav id="sidebar">
         <ul>
             <li><a href="index.html">Home</a></li>
@@ -22,25 +22,30 @@
         </ul>
     </nav>
 
-    <!-- About Section -->
-    <section class="about">
+    <div class="about-container">
         <img src="page-image-elements/profile.png" alt="Profile Picture">
-        <h1>About Me</h1>
-        <p>I'm a naturalist, exploring and documenting biodiversity.</p>
-        <p>Through my lens and words, I strive to share the wonders of the natural world.</p>
-        <a href="your-cv-link.pdf" class="btn">View My CV</a>
-    </section>
+        <h2>Siyaul Haque</h2>
+        <p>I'm a passionate naturalist, exploring the world’s biodiversity and sharing my experiences. 
+           From birdwatching to marine life encounters, my journey is all about discovering the beauty of nature.</p>
+        
+        <div class="skills-container">
+            <div class="skill">Wildlife Photography</div>
+            <div class="skill">Marine Biology</div>
+            <div class="skill">Conservation</div>
+            <div class="skill">Environmental Writing</div>
+        </div>
+        
+        <a href="cv.pdf" download class="btn">Download My CV</a>
+        
+        <div class="contact-section">
+            <p>Want to connect? Reach out to me via <a href="contact.html">Contact Page</a></p>
+        </div>
+    </div>
 
-    <footer>
-        <p>© 2025 Siyaulhaque | Exploring the Natural World</p>
-    </footer>
-
-    <!-- JavaScript for Sidebar Toggle -->
     <script>
         document.getElementById("sidebar-icon").addEventListener("click", function () {
             document.getElementById("sidebar").classList.toggle("active");
         });
     </script>
-
 </body>
 </html>
