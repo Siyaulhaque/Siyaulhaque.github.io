@@ -6,10 +6,90 @@
     <title>Siyaulhaque | Contact</title>
     <link rel="stylesheet" href="style/sidebar.css">
     <link rel="stylesheet" href="style/contact.css"> 
+    <style>
+        /* Contact Page Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+        .contact-container {
+            max-width: 800px;
+            margin: 50px auto;
+            padding: 40px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #1B5E20;
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+        p {
+            font-size: 1.2rem;
+            color: #444;
+            margin-bottom: 20px;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            text-decoration: none;
+            background: #388E3C;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background 0.3s;
+        }
+        .social-links a:hover {
+            background: #1B5E20;
+        }
+        .contact-form {
+            margin-top: 30px;
+            text-align: left;
+        }
+        .contact-form label {
+            font-weight: bold;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .contact-form button {
+            background: #388E3C;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .contact-form button:hover {
+            background: #1B5E20;
+        }
+        footer {
+            margin-top: 50px;
+            padding: 10px;
+            background: #2E7D32;
+            color: white;
+            font-weight: bold;
+        }
+    </style>
 </head>
 <body>
 
-     <!-- Sidebar Toggle Button -->
+    <!-- Sidebar Toggle Button -->
     <div id="sidebar-icon">&#9776;</div>
     
     <!-- Sidebar Navigation -->
@@ -23,21 +103,39 @@
     </nav>
 
     <!-- Contact Section -->
-    <section class="contact">
+    <div class="contact-container">
         <h1>Contact Me</h1>
         <p>Feel free to reach out via social media or email.</p>
+        
         <div class="social-links">
             <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
             <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
             <a href="mailto:youremail@example.com">Email</a>
         </div>
-    </section>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
 
     <footer>
         <p>© 2025 Siyaulhaque | Let's Connect and Explore Together</p>
     </footer>
 
-   <script>
+    <script>
         document.getElementById("sidebar-icon").addEventListener("click", function () {
             document.getElementById("sidebar").classList.toggle("active");
             this.classList.toggle("small");
