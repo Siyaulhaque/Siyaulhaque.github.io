@@ -8,6 +8,49 @@ body {
     text-align: center;
 }
 
+/* Sidebar Styles */
+#sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #333;
+    transition: left 0.3s ease-in-out;
+    padding-top: 50px;
+}
+
+#sidebar.active {
+    left: 0;
+}
+
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+#sidebar ul li {
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+}
+
+#sidebar-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    color: white;
+    background: #333;
+    padding: 10px;
+    border-radius: 5px;
+}
+
 /* Header Navigation with Green Switches */
 header {
     background: #2E7D32;
@@ -178,37 +221,6 @@ h2 {
     background: white;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Tooltip Styles */
-.tooltip {
-    position: relative;
-    display: inline-block;
-    cursor: pointer;
-}
-
-/* Tooltip text (hidden by default) */
-.tooltip .tooltiptext {
-    visibility: hidden;
-    width: 200px;
-    background-color: #AAA;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 0;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%; /* Position the tooltip above the button */
-    left: 50%;
-    margin-left: -100px; /* Center the tooltip */
-    opacity: 0;
-    transition: opacity 0.3s;
-}
-
-/* Show the tooltip text when you hover over the tooltip container */
-.tooltip:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1;
 }
 
 footer {
