@@ -1,7 +1,7 @@
 /* Sidebar Styles */
 #sidebar {
     position: fixed;
-    left: -250px;
+    left: -250px; /* Initially hidden */
     top: 0;
     width: 250px;
     height: 100%;
@@ -63,13 +63,14 @@
     padding: 10px 15px;
     border-radius: 5px;
     z-index: 1200;
-    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, background 0.3s;
+    transition: left 0.3s ease-in-out, background 0.3s, transform 0.3s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Shrinks button when sidebar is open */
+/* Moves the toggle button when sidebar is open */
 #sidebar.active + #sidebar-icon {
-    transform: scale(0.8);
+    left: 260px;
+    background: #1B5E20; /* Change color when active */
 }
 
 /* Hover Effect for Sidebar Icon */
