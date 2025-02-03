@@ -5,9 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yawalhub | Blog</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="sidebar.css">
 </head>
 <body>
 
+    <!-- Sidebar Toggle Button -->
+    <div id="sidebar-icon">&#9776;</div>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
     <header class="hero">
         <div class="hero-content">
             <h1>My Journals</h1>
@@ -15,18 +30,43 @@
         </div>
     </header>
 
+    <!-- Blog List Section -->
     <section class="blog-preview">
         <h2>All Journals</h2>
-        <div class="blog-list">
-            <a href="blog/journal1.html" class="blog-item">Memorable Encounter with a Dolphin</a>
-            <a href="blog/journal2.html" class="blog-item">Exploring the Intertidal Zone</a>
-            <a href="blog/journal3.html" class="blog-item">Birdwatching in Ooty</a>
-        </div>
+        <div class="blog-list" id="blogList"></div>
     </section>
 
     <footer>
         <p>© 2025 Siyaulhaque | Capturing Nature, One Story at a Time</p>
     </footer>
+
+    <!-- JavaScript for Dynamic Blog List -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const blogs = [
+                { title: "Memorable Encounter with a Dolphin", url: "blog/blog1.html", date: "2025-01-20" },
+                { title: "Exploring the Intertidal Zone", url: "blog/blog2.html", date: "2025-02-01" },
+                { title: "Birdwatching in Ooty", url: "blog/blog3.html", date: "2025-02-05" }
+            ];
+
+            // Sort blogs by latest date
+            blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            const blogListContainer = document.getElementById("blogList");
+            blogs.forEach(blog => {
+                const link = document.createElement("a");
+                link.href = blog.url;
+                link.classList.add("blog-item");
+                link.textContent = blog.title;
+                blogListContainer.appendChild(link);
+            });
+        });
+
+        // Sidebar Toggle
+        document.getElementById("sidebar-icon").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("active");
+        });
+    </script>
 
 </body>
 </html>
