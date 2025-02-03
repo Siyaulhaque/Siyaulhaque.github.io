@@ -10,7 +10,7 @@
 <body>
 
     <!-- Sidebar Toggle Button -->
-    <div id="sidebar-icon">&#9776;</div>
+    <button id="sidebar-icon" aria-expanded="false">&#9776;</button>
 
     <!-- Sidebar -->
     <nav id="sidebar">
@@ -46,7 +46,7 @@
         <p>© 2025 Siyaulhaque</p>
     </footer>
 
-    <!-- JavaScript for Dynamic Article Cards -->
+    <!-- JavaScript for Sidebar and Article Cards -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const blogs = [
@@ -88,8 +88,13 @@
         });
 
         // Sidebar Toggle
-        document.getElementById("sidebar-icon").addEventListener("click", function () {
-            document.getElementById("sidebar").classList.toggle("active");
+        const sidebarIcon = document.getElementById("sidebar-icon");
+        const sidebar = document.getElementById("sidebar");
+
+        sidebarIcon.addEventListener("click", function () {
+            sidebar.classList.toggle("active");
+            const expanded = sidebar.classList.contains("active");
+            sidebarIcon.setAttribute("aria-expanded", expanded);
         });
     </script>
 
