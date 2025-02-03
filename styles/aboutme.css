@@ -18,15 +18,22 @@ body {
 
 /* Main Content */
 .main-content {
-    margin-left: 250px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 20px;
+    max-width: 1000px;
     transition: margin-left 0.3s ease-in-out;
+    text-align: center;
+}
+
+.main-content.sidebar-active {
+    margin-left: 250px;
 }
 
 /* About Me Page Styles */
 .about-container {
     max-width: 900px;
-    margin: auto;
+    margin: 60px auto;
     padding: 40px;
     text-align: center;
     background: white;
@@ -128,6 +135,7 @@ body {
     transition: 0.3s ease-in-out;
     padding-top: 20px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
 }
 
 #sidebar.active {
@@ -173,13 +181,9 @@ body {
     left: 260px;
 }
 
-.main-content.sidebar-active {
-    margin-left: 250px;
-}
-
-/* Responsive Design */
+/* Prevent sidebar from overlapping content */
 @media screen and (max-width: 768px) {
     .main-content {
-        margin-left: 0;
+        margin-left: 0 !important;
     }
 }
