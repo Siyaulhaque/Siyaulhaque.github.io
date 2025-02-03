@@ -8,39 +8,80 @@ body {
     text-align: center;
 }
 
+/* About Me Page Styles */
+.about-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 40px;
+    text-align: center;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Decorative Circles */
+.about-container::before, .about-container::after {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #A5D6A7;
+    border-radius: 50%;
+    opacity: 0.5;
+    transition: transform 0.5s ease-in-out;
+}
+
+.about-container::before {
+    top: -50px;
+    left: -50px;
+}
+
+.about-container::after {
+    bottom: -50px;
+    right: -50px;
+}
+
+/* Profile Image */
+.about-container img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 5px solid #388E3C;
+    transition: transform 0.4s ease-in-out;
+}
+
+.about-container img:hover {
+    transform: scale(1.1);
+}
+
 /* Sidebar */
 #sidebar {
     width: 250px;
     height: 100vh;
     position: fixed;
-    left: -260px;
+    left: -250px;
     top: 0;
     background: #2c3e50;
-    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
     padding-top: 20px;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0);
-    will-change: transform, box-shadow;
+    box-shadow: 3px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 #sidebar.active {
-    transform: translateX(260px);
-    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
+    transform: translateX(250px);
+    box-shadow: 5px 0 20px rgba(0, 0, 0, 0.4);
 }
 
 #sidebar ul {
     list-style: none;
     padding: 0;
-    margin: 0;
 }
 
 #sidebar ul li {
     padding: 15px;
-    transition: background 0.3s ease, transform 0.2s ease;
-}
-
-#sidebar ul li:hover {
-    background: #1a252f;
-    transform: scale(1.05);
 }
 
 #sidebar ul li a {
@@ -48,11 +89,13 @@ body {
     text-decoration: none;
     display: block;
     font-size: 18px;
-    transition: color 0.3s;
+    transition: background 0.3s, padding 0.2s;
 }
 
 #sidebar ul li a:hover {
-    color: #81C784;
+    background: #1a252f;
+    padding-left: 20px;
+    border-radius: 5px;
 }
 
 /* Sidebar Toggle Button */
@@ -66,16 +109,12 @@ body {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: transform 0.3s ease, background 0.3s ease;
-}
-
-#sidebar-icon:hover {
-    background: #1a252f;
-    transform: scale(1.1);
+    transition: transform 0.3s ease, background 0.3s;
 }
 
 #sidebar-icon.small {
-    transform: translateX(260px);
+    transform: translateX(250px);
+    background: #1a252f;
 }
 
 /* Fade-in Animation */
