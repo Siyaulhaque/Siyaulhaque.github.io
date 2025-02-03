@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="sidebar.css">
+    <link rel="stylesheet" href="article-card.css">
 </head>
 <body>
 
     <!-- Sidebar Toggle Button -->
-    <button id="sidebar-icon" aria-expanded="false">&#9776;</button>
+    <div id="sidebar-icon">&#9776;</div>
 
     <!-- Sidebar -->
     <nav id="sidebar">
@@ -46,7 +46,7 @@
         <p>© 2025 Siyaulhaque</p>
     </footer>
 
-    <!-- JavaScript for Sidebar and Article Cards -->
+    <!-- JavaScript for Dynamic Article Cards -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const blogs = [
@@ -63,7 +63,8 @@
 
             const articleCardsContainer = document.getElementById("articleCards");
             latestBlogs.forEach(blog => {
-                const articleCard = document.createElement("section");
+                const articleCard = document.createElement("a");
+                articleCard.href = blog.url;
                 articleCard.classList.add("record");
 
                 articleCard.innerHTML = `
@@ -78,23 +79,13 @@
                     </div>
                 `;
 
-                // Redirect to blog post when clicked
-                articleCard.addEventListener("click", function () {
-                    window.location.href = blog.url;
-                });
-
                 articleCardsContainer.appendChild(articleCard);
             });
         });
 
         // Sidebar Toggle
-        const sidebarIcon = document.getElementById("sidebar-icon");
-        const sidebar = document.getElementById("sidebar");
-
-        sidebarIcon.addEventListener("click", function () {
-            sidebar.classList.toggle("active");
-            const expanded = sidebar.classList.contains("active");
-            sidebarIcon.setAttribute("aria-expanded", expanded);
+        document.getElementById("sidebar-icon").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("active");
         });
     </script>
 
