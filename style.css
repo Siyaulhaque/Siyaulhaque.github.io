@@ -45,11 +45,13 @@ body {
     left: 20px;
     font-size: 30px;
     cursor: pointer;
+    background: #2E7D32;
     color: white;
-    background: #333;
     padding: 10px;
     border-radius: 5px;
+    z-index: 1000;
 }
+
 
 /* Header Navigation with Green Switches */
 header {
