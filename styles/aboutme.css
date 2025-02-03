@@ -73,6 +73,7 @@
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
+/* Contact Section */
 .contact-section {
     margin-top: 30px;
     background: #E8F5E9;
@@ -92,6 +93,7 @@
     color: #388E3C;
 }
 
+/* Button Styles */
 .about-container .btn {
     background: #388E3C;
     color: white;
@@ -111,3 +113,95 @@
     transform: scale(1.07);
 }
 
+/* Sidebar Styles */
+#sidebar {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background: #2c3e50; /* Sidebar color */
+    transition: left 0.3s ease-in-out;
+    padding-top: 50px;
+    z-index: 1100;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/* Active state - when sidebar is open */
+#sidebar.active {
+    left: 0;
+}
+
+/* Sidebar Navigation List */
+#sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sidebar ul li {
+    padding: 12px;
+    text-align: center;
+    transition: background 0.3s, transform 0.2s;
+}
+
+#sidebar ul li:hover {
+    background: #34495e;
+    border-radius: 5px;
+    transform: scale(1.05);
+}
+
+#sidebar ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#sidebar ul li a:hover {
+    color: #1abc9c;
+}
+
+/* Sidebar Toggle Button */
+#sidebar-icon {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    font-size: 30px;
+    cursor: pointer;
+    background: #2E7D32;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    z-index: 1200;
+    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, background 0.3s;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Shrinks button when sidebar is open */
+#sidebar.active + #sidebar-icon {
+    transform: scale(0.8);
+}
+
+/* Hover Effect for Sidebar Icon */
+#sidebar-icon:hover {
+    background: #1B5E20;
+}
+
+/* Responsive Design for Smaller Screens */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 220px;
+    }
+    #sidebar ul li a {
+        font-size: 1.1rem;
+    }
+    #sidebar-icon {
+        font-size: 28px;
+        padding: 8px 12px;
+    }
+}
