@@ -5,21 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="article-card.css">
     <link rel="stylesheet" href="sidebar.css">
-    <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Sidebar Navigation -->
-    <div class="sidebar">
-        <button class="close-btn" onclick="toggleSidebar()">&times;</button>
-        <a href="index.html">Home</a>
-        <a href="aboutme.html">About</a>
-        <a href="blog/blog.html">Blog</a>
-        <a href="contact.html">Contact</a>
-    </div>
-    <button class="sidebar-icon" onclick="toggleSidebar()">&#9776;</button>
-    
+
+    <!-- Sidebar Toggle Button -->
+    <div id="sidebar-icon">&#9776;</div>
+
+    <!-- Sidebar -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
@@ -38,19 +40,58 @@
     </section>
 
     <!-- Dynamic Article Cards -->
-    <div class="record_wrap" id="article-container"></div>
-    
-    <!-- Social Media Links -->
-    <section class="social-links">
-        <h2>Connect with Me</h2>
-        <a href="https://instagram.com/yourprofile" target="_blank">Instagram</a>
-        <a href="https://linkedin.com/in/Siya Ul Haque" target="_blank">LinkedIn</a>
-        <a href="https://github.com/Siyaulhaque" target="_blank">GitHub</a>
-    </section>
+    <div class="record_wrap" id="articleCards"></div>
 
-    <!-- Footer -->
     <footer>
-        &copy; 2025 Siyaulhaque
+        <p>© 2025 Siyaulhaque</p>
     </footer>
+
+    <!-- JavaScript for Dynamic Article Cards -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const blogs = [
+                { title: "Memorable Encounter with a Dolphin", url: "blog/blog1.html", image: "page-image-elements/dolphin.jpg", date: "2025-01-20" },
+                { title: "Exploring the Intertidal Zone", url: "blog/blog2.html", image: "page-image-elements/intertidal.jpg", date: "2025-02-01" },
+                { title: "Birdwatching in Ooty", url: "blog/blog3.html", image: "page-image-elements/birdwatching.jpg", date: "2025-02-05" }
+            ];
+
+            // Sort blogs by latest date
+            blogs.sort((a, b) => new Date(b.date) - new Date(a.date));
+
+            // Select the latest 3 blogs
+            const latestBlogs = blogs.slice(0, 3);
+
+            const articleCardsContainer = document.getElementById("articleCards");
+            latestBlogs.forEach(blog => {
+                const articleCard = document.createElement("section");
+                articleCard.classList.add("record");
+
+                articleCard.innerHTML = `
+                    <div class="record-arrow">
+                        <img src="page-image-elements/arrow.png" alt="Arrow">
+                    </div>
+                    <div class="record-display" style="background-image: url('${blog.image}');">
+                    </div>
+                    <div class="record-desc">
+                        <h1>${blog.title}</h1>
+                        <p>Read more about this article.</p>
+                    </div>
+                `;
+
+                // Redirect to blog post when clicked
+                articleCard.addEventListener("click", function () {
+                    window.location.href = blog.url;
+                });
+
+                articleCardsContainer.appendChild(articleCard);
+            });
+        });
+
+        // Sidebar Toggle
+        document.getElementById("sidebar-icon").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("active");
+        });
+    </script>
+
 </body>
 </html>
