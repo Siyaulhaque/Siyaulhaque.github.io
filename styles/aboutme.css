@@ -32,6 +32,7 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
     position: relative;
     overflow: hidden;
+    margin-bottom: 30px; /* Added gap between bio and skill set */
 }
 
 /* Decorative Circles */
@@ -91,17 +92,17 @@ body {
 .skills-container {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Adjust spacing between skills */
+    gap: 15px; /* Increased spacing between skills */
     flex-wrap: wrap;
     margin-bottom: 40px;
 }
 
 .skill {
     background: var(--accent-color);
-    padding: 5px 10px; /* Reduced padding for smaller size */
+    padding: 5px 15px; /* Adjusted padding for spacing */
     border-radius: 20px;
     color: white;
-    font-size: 0.9rem; /* Reduced font size */
+    font-size: 0.9rem; /* Adjusted font size */
     font-weight: bold;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
@@ -156,16 +157,13 @@ body {
     width: 250px;
     height: 100vh;
     position: fixed;
-    left: -250px;
+    left: 0;
     top: 0;
     background: #2c3e50;
     transition: all 0.3s ease-in-out;
     padding-top: 20px;
     box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
-}
-
-#sidebar.active {
-    left: 0;
+    z-index: 1000;
 }
 
 #sidebar ul {
