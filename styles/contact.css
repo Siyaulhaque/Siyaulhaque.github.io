@@ -1,144 +1,70 @@
-/* General Page Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #eef5e5;
-    text-align: center;
-    color: #2c3e50;
-    transition: background-color 0.5s ease-in-out;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siyaulhaque | Contact</title>
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="styles/contact.css"> 
+</head>
+<body>
 
-/* Contact Page Hero Section */
-.contact-hero {
-    background: url('page-image-elements/banner.png') no-repeat center center/cover;
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    position: relative;
-    animation: fadeIn 1s ease-in-out;
-}
+    <!-- Sidebar Toggle Button -->
+    <div id="sidebar-icon">&#9776;</div>
+    
+    <!-- Sidebar Navigation -->
+    <nav id="sidebar">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="aboutme.html">About</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
 
-/* Contact Container */
-.contact-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
-    padding: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    animation: slideUp 1s ease-in-out;
-}
+    <!-- Contact Page Hero Section -->
+    <div class="contact-hero">
+        <h1>Get in Touch</h1>
+    </div>
 
-.contact-container h1 {
-    font-size: 2.5rem;
-    color: #1B5E20;
-    margin-bottom: 15px;
-}
+    <!-- Contact Section -->
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <p>Feel free to reach out via social media or email.</p>
+        
+        <div class="social-links">
+            <a href="https://twitter.com/yourhandle" target="_blank">Twitter</a>
+            <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
+            <a href="mailto:youremail@example.com">Email</a>
+        </div>
+        
+        <!-- Contact Form -->
+        <div class="contact-form">
+            <h2>Send a Message</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+                
+                <button type="submit">Send</button>
+            </form>
+        </div>
+    </div>
 
-.contact-container p {
-    font-size: 1.2rem;
-    color: #444;
-    line-height: 1.6;
-}
+    <footer>
+        <p>© 2025 Siyaulhaque | Let's Connect and Explore Together</p>
+    </footer>
 
-/* Contact Form */
-.contact-form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    width: 100%;
-    max-width: 500px;
-}
-
-.contact-form input, .contact-form textarea {
-    width: 100%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-    transition: border-color 0.3s ease-in-out;
-}
-
-.contact-form input:focus, .contact-form textarea:focus {
-    border-color: #388E3C;
-    outline: none;
-    box-shadow: 0 0 5px rgba(56, 142, 60, 0.5);
-}
-
-.contact-form textarea {
-    resize: none;
-    height: 120px;
-}
-
-.contact-form button {
-    background: #388E3C;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background 0.3s, transform 0.2s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-.contact-form button:hover {
-    background: #1B5E20;
-    transform: scale(1.05);
-}
-
-/* Social Links */
-.social-links {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 15px;
-}
-
-.social-links a {
-    display: inline-block;
-    padding: 12px 20px;
-    color: white;
-    background: #388E3C;
-    border-radius: 8px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, transform 0.2s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-}
-
-.social-links a:hover {
-    background: #1B5E20;
-    transform: scale(1.1);
-}
-
-/* Footer */
-footer {
-    background: #2E7D32;
-    color: white;
-    padding: 15px;
-    margin-top: 20px;
-    font-size: 1rem;
-}
-
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-}
-
-@keyframes slideUp {
-    from { transform: translateY(20px); opacity: 0; }
-    to { transform: translateY(0); opacity: 1; }
-}
+    <script>
+        document.getElementById("sidebar-icon").addEventListener("click", function () {
+            document.getElementById("sidebar").classList.toggle("active");
+            this.classList.toggle("small");
+        });
+    </script>
+</body>
+</html>
