@@ -10,10 +10,10 @@
 <body>
     
     <!-- Sidebar Toggle Button -->
-    <div id="sidebar-icon">&#9776;</div>
+    <div id="sidebar-icon" class="fade-in">&#9776;</div>
     
     <!-- Sidebar Navigation -->
-    <nav id="sidebar">
+    <nav id="sidebar" class="fade-in">
         <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="aboutme.html" class="active">About</a></li>
@@ -23,9 +23,9 @@
     </nav>
 
     <!-- About Me Section -->
-    <div class="about-container">
+    <div class="about-container fade-in">
         <img src="page-image-elements/profile.png" alt="Profile Picture of Siya ul Haque">
-        <h2>Siya ul Haque</h2>
+        <h2 class="typing-effect">Siya ul Haque</h2>
         <p>I’m Siya ul Haque, a naturalist and explorer with countless stories from my time in the wild. While I don’t consider myself a writer, this space is my effort to document and share my experiences—observations from nature, encounters with wildlife, and the places I’ve traveled.</p>
 
         <p>Beyond exploration, this blog also serves as a journal—a place to capture memorable moments with guests, sharing photos and reflections like a diary. Every interaction, every journey, and every story holds meaning, and this is where I keep those memories alive.</p>
@@ -33,7 +33,7 @@
         <p>This is a collection of nature, life, and the wonders that inspire me.</p>
         
         <!-- Skills Section -->
-        <div class="skills-container">
+        <div class="skills-container fade-in">
             <div class="skill">Wildlife Photography</div>
             <div class="skill">Documentation</div>
             <div class="skill">Conservation</div>
@@ -41,26 +41,44 @@
         </div>
         
         <!-- CV Download Button -->
-        <a href="page-image-elements/cv.pdf" download class="btn">Download My CV</a>
+        <a href="page-image-elements/cv.pdf" download class="btn fade-in">Download My CV</a>
         
         <!-- Contact Section -->
-        <div class="contact-section">
+        <div class="contact-section fade-in">
             <p>Want to connect? Reach out to me via the <a href="contact.html">Contact Page</a>.</p>
         </div>
     </div>
 
-    <!-- JavaScript for Sidebar Toggle -->
+    <!-- JavaScript for Animations and Sidebar Toggle -->
     <script>
         document.getElementById("sidebar-icon").addEventListener("click", function () {
             let sidebar = document.getElementById("sidebar");
             sidebar.classList.toggle("active");
-
+            
             // Move and change color of the sidebar toggle button
             if (sidebar.classList.contains("active")) {
                 this.classList.add("small");
             } else {
                 this.classList.remove("small");
             }
+        });
+
+        // Reveal animations on scroll
+        document.addEventListener("DOMContentLoaded", function () {
+            const fadeInElements = document.querySelectorAll(".fade-in");
+
+            function revealOnScroll() {
+                fadeInElements.forEach(el => {
+                    const elementTop = el.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    if (elementTop < windowHeight - 50) {
+                        el.classList.add("visible");
+                    }
+                });
+            }
+
+            revealOnScroll(); // Run on page load
+            window.addEventListener("scroll", revealOnScroll);
         });
     </script>
 </body>
