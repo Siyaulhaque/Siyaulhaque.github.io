@@ -11,6 +11,7 @@
     overflow: hidden;
 }
 
+/* Decorative Circles */
 .about-container::before, .about-container::after {
     content: "";
     position: absolute;
@@ -31,14 +32,21 @@
     right: -50px;
 }
 
+/* Profile Image */
 .about-container img {
     width: 180px;
     height: 180px;
     border-radius: 50%;
     margin-bottom: 15px;
     border: 5px solid #388E3C;
+    transition: transform 0.3s ease-in-out;
 }
 
+.about-container img:hover {
+    transform: scale(1.1);
+}
+
+/* Heading */
 .about-container h2 {
     color: #1B5E20;
     font-size: 2.5rem;
@@ -46,6 +54,7 @@
     font-weight: bold;
 }
 
+/* Paragraph Text */
 .about-container p {
     font-size: 1.2rem;
     color: #444;
@@ -56,12 +65,14 @@
     margin-right: auto;
 }
 
+/* Skills Section */
 .skills-container {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
-    margin-bottom: 40px; /* Added spacing between skills and CV section */
+    flex-wrap: wrap;
+    margin-bottom: 40px;
 }
 
 .skill {
@@ -71,6 +82,31 @@
     color: white;
     font-weight: bold;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+
+/* CV Download Button */
+.about-container .btn {
+    background: #388E3C;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 8px;
+    margin-top: 25px;
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s, transform 0.2s;
+}
+
+.about-container .btn:hover {
+    background: #1B5E20;
+    transform: scale(1.07);
 }
 
 /* Contact Section */
@@ -93,34 +129,14 @@
     color: #388E3C;
 }
 
-/* Button Styles */
-.about-container .btn {
-    background: #388E3C;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 25px;
-    display: inline-block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.2s;
-}
-
-.about-container .btn:hover {
-    background: #1B5E20;
-    transform: scale(1.07);
-}
-
-/* Sidebar Styles */
+/* Sidebar Styles (Imported from sidebar.css to match all pages) */
 #sidebar {
     position: fixed;
     left: -250px;
     top: 0;
     width: 250px;
     height: 100%;
-    background: #2c3e50; /* Sidebar color */
+    background: #2c3e50;
     transition: left 0.3s ease-in-out;
     padding-top: 50px;
     z-index: 1100;
@@ -129,12 +145,11 @@
     border-bottom-right-radius: 10px;
 }
 
-/* Active state - when sidebar is open */
 #sidebar.active {
     left: 0;
 }
 
-/* Sidebar Navigation List */
+/* Sidebar Navigation */
 #sidebar ul {
     list-style: none;
     padding: 0;
@@ -178,21 +193,21 @@
     padding: 10px 15px;
     border-radius: 5px;
     z-index: 1200;
-    transition: transform 0.3s ease-in-out, font-size 0.3s ease-in-out, background 0.3s;
+    transition: left 0.3s ease-in-out, background 0.3s, transform 0.3s ease-in-out;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 
-/* Shrinks button when sidebar is open */
 #sidebar.active + #sidebar-icon {
-    transform: scale(0.8);
+    left: 260px;
+    background: #1B5E20;
 }
 
-/* Hover Effect for Sidebar Icon */
+/* Sidebar Toggle Hover Effect */
 #sidebar-icon:hover {
     background: #1B5E20;
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design */
 @media screen and (max-width: 768px) {
     #sidebar {
         width: 220px;
