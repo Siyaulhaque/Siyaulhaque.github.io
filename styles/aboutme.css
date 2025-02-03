@@ -8,161 +8,39 @@ body {
     text-align: center;
 }
 
-/* About Me Page Styles */
-.about-container {
-    max-width: 900px;
-    margin: auto;
-    padding: 40px;
-    text-align: center;
-    background: white;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-    position: relative;
-    overflow: hidden;
-}
-
-/* Decorative Circles */
-.about-container::before, .about-container::after {
-    content: "";
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    background: #A5D6A7;
-    border-radius: 50%;
-    opacity: 0.5;
-}
-
-.about-container::before {
-    top: -50px;
-    left: -50px;
-}
-
-.about-container::after {
-    bottom: -50px;
-    right: -50px;
-}
-
-/* Profile Image */
-.about-container img {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    margin-bottom: 15px;
-    border: 5px solid #388E3C;
-    transition: transform 0.3s ease-in-out;
-}
-
-.about-container img:hover {
-    transform: scale(1.1);
-}
-
-/* Heading */
-.about-container h2 {
-    color: #1B5E20;
-    font-size: 2.5rem;
-    margin-bottom: 15px;
-    font-weight: bold;
-}
-
-/* Paragraph Text */
-.about-container p {
-    font-size: 1.2rem;
-    color: #444;
-    line-height: 1.8;
-    margin-bottom: 15px;
-    max-width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-/* Skills Section */
-.skills-container {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 40px;
-}
-
-.skill {
-    background: #81C784;
-    padding: 10px 15px;
-    border-radius: 25px;
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.skill:hover {
-    transform: scale(1.1);
-}
-
-/* CV Download Button */
-.about-container .btn {
-    background: #388E3C;
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 8px;
-    margin-top: 25px;
-    display: inline-block;
-    font-size: 1.2rem;
-    font-weight: bold;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background 0.3s, transform 0.2s;
-}
-
-.about-container .btn:hover {
-    background: #1B5E20;
-    transform: scale(1.07);
-}
-
-/* Contact Section */
-.contact-section {
-    margin-top: 30px;
-    background: #E8F5E9;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
-}
-
-.contact-section a {
-    color: #1B5E20;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.contact-section a:hover {
-    color: #388E3C;
-}
-
 /* Sidebar */
 #sidebar {
     width: 250px;
     height: 100vh;
     position: fixed;
-    left: -250px;
+    left: -260px;
     top: 0;
     background: #2c3e50;
-    transition: left 0.3s ease-in-out;
+    transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease-in-out;
     padding-top: 20px;
-    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0);
+    will-change: transform, box-shadow;
 }
 
 #sidebar.active {
-    left: 0;
+    transform: translateX(260px);
+    box-shadow: 5px 0 15px rgba(0, 0, 0, 0.3);
 }
 
 #sidebar ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 #sidebar ul li {
     padding: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+#sidebar ul li:hover {
+    background: #1a252f;
+    transform: scale(1.05);
 }
 
 #sidebar ul li a {
@@ -170,12 +48,11 @@ body {
     text-decoration: none;
     display: block;
     font-size: 18px;
+    transition: color 0.3s;
 }
 
 #sidebar ul li a:hover {
-    background: #1a252f;
-    padding: 12px;
-    border-radius: 5px;
+    color: #81C784;
 }
 
 /* Sidebar Toggle Button */
@@ -189,23 +66,14 @@ body {
     color: white;
     padding: 10px 15px;
     border-radius: 5px;
-    transition: 0.3s;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#sidebar-icon:hover {
+    background: #1a252f;
+    transform: scale(1.1);
 }
 
 #sidebar-icon.small {
-    left: 260px;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    #sidebar {
-        width: 220px;
-    }
-    #sidebar ul li a {
-        font-size: 1.1rem;
-    }
-    #sidebar-icon {
-        font-size: 28px;
-        padding: 8px 12px;
-    }
+    transform: translateX(260px);
 }
