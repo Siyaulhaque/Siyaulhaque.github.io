@@ -49,11 +49,20 @@
         </div>
     </div>
 
-    <script>
-        document.getElementById("sidebar-icon").addEventListener("click", function () {
-            document.getElementById("sidebar").classList.toggle("active");
-            this.classList.toggle("small");
-        });
-    </script>
+   <script>
+    document.getElementById("sidebar-icon").addEventListener("click", function () {
+        let sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("active");
+
+        // Move and change color of the sidebar toggle button
+        if (sidebar.classList.contains("active")) {
+            this.style.left = "260px";
+            this.style.background = "#1B5E20";
+        } else {
+            this.style.left = "20px";
+            this.style.background = "#2E7D32";
+        }
+    });
+</script>
 </body>
 </html>
