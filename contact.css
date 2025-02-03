@@ -10,7 +10,7 @@ body {
 
 /* Contact Page Hero Section */
 .contact-hero {
-    background: url('page-image-elements/contact-banner.jpg') no-repeat center center/cover;
+    background: url('page-image-elements/banner.png') no-repeat center center/cover;
     height: 60vh;
     display: flex;
     align-items: center;
