@@ -15,6 +15,12 @@ body {
     text-align: center;
 }
 
+/* Main Content */
+.main-content {
+    margin-left: 250px; /* Adjust this value to match the sidebar's width */
+    padding: 20px;
+}
+
 /* About Me Page Styles */
 .about-container {
     max-width: 900px;
@@ -85,18 +91,17 @@ body {
 .skills-container {
     display: flex;
     justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px; /* Adjust spacing between skills */
     flex-wrap: wrap;
     margin-bottom: 40px;
-    flex-direction: column;
 }
 
 .skill {
     background: var(--accent-color);
-    padding: 10px 15px;
-    border-radius: 25px;
+    padding: 5px 10px; /* Reduced padding for smaller size */
+    border-radius: 20px;
     color: white;
+    font-size: 0.9rem; /* Reduced font size */
     font-weight: bold;
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out;
@@ -215,8 +220,5 @@ body {
     #sidebar-icon {
         font-size: 28px;
         padding: 8px 12px;
-    }
-    .skills-container {
-        flex-direction: column;
     }
 }
