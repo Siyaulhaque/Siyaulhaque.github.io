@@ -52,6 +52,14 @@
     transform: scale(1.1);
 }
 
+/* Active Navigation Button */
+.active-nav {
+    background-color: rgba(255, 255, 255, 0.2); /* Adjust transparency as needed */
+    border-radius: 8px;
+    padding: 8px 12px;
+    transition: background-color 0.3s ease-in-out;
+}
+
 .dropdown-panel {
     position: absolute;
     top: 50px;
