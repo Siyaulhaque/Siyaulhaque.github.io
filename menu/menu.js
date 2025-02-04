@@ -5,14 +5,14 @@ document.addEventListener("DOMContentLoaded", function() {
     const currentPage = window.location.pathname.split("/").pop();
 
     navButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            dropdownPanel.classList.toggle("active");
-        });
-
         // Highlight the active page button
         if (button.getAttribute("data-page") === currentPage) {
             button.classList.add("active-nav");
         }
+
+        button.addEventListener("click", function() {
+            dropdownPanel.classList.toggle("active");
+        });
     });
 
     // Ensure navigation buttons redirect correctly
