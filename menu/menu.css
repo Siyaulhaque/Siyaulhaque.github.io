@@ -4,75 +4,81 @@
     top: 0;
     left: 0;
     width: 100%;
-    background-color: #27AEB9;
+    height: 50px; /* Reduced height */
+    background: rgba(10, 25, 47, 0.9); /* Dark marine blue with transparency */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     padding: 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     z-index: 1000;
+    transition: all 0.3s ease-in-out;
 }
 
 /* Logo Button */
 .logo-btn {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: bold;
     color: white;
     text-decoration: none;
     padding: 8px 15px;
     border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, transform 0.2s;
 }
 
 .logo-btn:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Navigation Container */
+.nav-container {
+    display: flex;
+    gap: 20px;
 }
 
 /* Navigation Buttons */
-.nav-container {
-    display: flex;
-    gap: 15px;
-    margin-left: 20px; /* Moves buttons closer to the logo */
-}
-
 .nav-btn {
-    font-size: 1rem; /* Reduced font size */
+    font-size: 1rem;
     font-weight: bold;
     color: white;
     background: none;
     border: none;
     cursor: pointer;
-    padding: 8px 12px;
+    padding: 8px 15px;
     border-radius: 5px;
-    transition: background 0.3s ease-in-out;
+    transition: background 0.3s ease-in-out, transform 0.2s;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .nav-btn:hover {
-    background-color: #1B5E20;
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
 }
 
 /* Dropdown Panel */
 .dropdown-panel {
     position: fixed;
-    top: 50px; /* Ensures it appears below the header */
+    top: 50px; /* Below the header */
     left: 0;
     width: 100%;
-    background: white;
+    background: rgba(255, 255, 255, 0.95);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     display: none;
-    padding: 15px;
+    padding: 20px;
     text-align: center;
     overflow: hidden;
+    transition: all 0.3s ease-in-out;
 }
 
 .dropdown-panel.active {
     display: block;
 }
 
-/* Ensuring Responsiveness */
+/* Responsive Adjustments */
 @media screen and (max-width: 768px) {
     .nav-container {
-        flex-direction: row;
         gap: 10px;
     }
     
