@@ -2,19 +2,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownPanel = document.getElementById("dropdownPanel");
     const navButtons = document.querySelectorAll(".nav-btn");
     const logoButton = document.getElementById("logoButton");
-    const currentPage = window.location.pathname.split("/").pop().toLowerCase();
+    const currentPage = window.location.href;
 
-    // Highlight the active page button
     navButtons.forEach(button => {
-        let buttonPage = button.getAttribute("data-page").toLowerCase();
+        button.addEventListener("click", function() {
+            dropdownPanel.classList.toggle("active");
+        });
 
-        if (buttonPage === currentPage) {
+        // Check if the current page URL includes the data-page value
+        if (currentPage.includes(button.getAttribute("data-page"))) {
             button.classList.add("active-nav");
         }
+    });
 
-        // Ensure proper redirection without affecting dropdown
+    // Navigation redirection using dataset attributes
+    navButtons.forEach(button => {
         button.addEventListener("click", function() {
-            window.location.href = buttonPage;
+            window.location.href = button.getAttribute("data-page");
         });
     });
 
