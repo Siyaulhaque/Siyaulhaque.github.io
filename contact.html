@@ -3,155 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Siyaulhaque | Contact</title>
-    <link rel="stylesheet" href="styles/contact.css"> 
-    <link rel="stylesheet" href="menu/menu.css"> <!-- New Header Styles -->
-    <style>
-        /* Contact Page Styles */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f4f4f4;
-            text-align: center;
-        }
-        .contact-container {
-            margin-top: 80px;
-            max-width: 800px;
-            margin: 50px auto;
-            padding: 40px;
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        h1 {
-            color: #1B5E20;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-        p {
-            font-size: 1.2rem;
-            color: #444;
-            margin-bottom: 20px;
-        }
-        .contact-form {
-            margin-top: 30px;
-            text-align: left;
-        }
-        .contact-form label {
-            font-weight: bold;
-        }
-        .contact-form input, .contact-form textarea {
-            width: 100%;
-            padding: 10px;
-            margin-top: 5px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-        .contact-form button {
-            background: #388E3C;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            margin-top: 10px;
-        }
-        .contact-form button:hover {
-            background: #1B5E20;
-        }
-        /* Social Media Section */
-        .social-section {
-            margin-top: 40px;
-            padding: 20px;
-            background: #ecf0f1;
-            border-radius: 10px;
-        }
-        .social-section h2 {
-            color: #1B5E20;
-            font-size: 1.5rem;
-        }
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-        .social-links a {
-            text-decoration: none;
-            background: #2c3e50;
-            color: white;
-            padding: 10px 15px;
-            border-radius: 5px;
-            font-weight: bold;
-            transition: background 0.3s;
-        }
-        .social-links a:hover {
-            background: #34495e;
-        }
-        footer {
-            margin-top: 50px;
-            padding: 10px;
-            background: #2E7D32;
-            color: white;
-            font-weight: bold;
-        }
-    </style>
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-
-    <!-- Simple Header Panel -->
-<header class="header">
-    <a href="index.html" class="logo-link">
-        <img src="page-image-elements/logo.png" alt="Logo" class="logo">
-    </a>
-    <nav class="nav-container">
-        <button class="nav-btn" onclick="window.location.href='aboutme.html'">About Me</button>
-        <button class="nav-btn" onclick="window.location.href='blog.html'">Blog</button>
-        <button class="nav-btn" onclick="window.location.href='contact.html'">Contact</button>
-    </nav>
-</header>
-
-    <!-- Contact Section -->
-    <div class="contact-container">
-        <h1>Contact Me</h1>
-        <p>Feel free to reach out via email or message below.</p>
-        
-        <!-- Contact Form -->
-        <div class="contact-form">
-            <h2>Send a Message</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-                
-                <button type="submit">Send</button>
-            </form>
+    <div class="main-content">
+        <div class="contact-container">
+            <h1>Contact Us</h1>
+            <p>We'd love to hear from you! Fill out the form below and we'll get back to you as soon as possible.</p>
+            
+            <div class="contact-form">
+                <form action="#" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                    
+                    <button type="submit">Send Message</button>
+                </form>
+            </div>
         </div>
-
-        <!-- Social Media Section -->
+        
         <div class="social-section">
-            <h2>Connect with Me</h2>
+            <h2>Follow Us</h2>
             <div class="social-links">
-                <a href="https://instagram.com/yourhandle" target="_blank">Instagram</a>
-                <a href="https://linkedin.com/in/yourhandle" target="_blank">LinkedIn</a>
-                <a href="https://ebird.org/profile/yourhandle" target="_blank">eBird</a>
-                <a href="https://www.inaturalist.org/people/yourhandle" target="_blank">iNaturalist</a>
-                <a href="https://commons.wikimedia.org/wiki/User:yourhandle" target="_blank">Wikimedia Commons</a>
-                <a href="https://github.com/yourhandle" target="_blank">GitHub</a>
+                <a href="#">Facebook</a>
+                <a href="#">Twitter</a>
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
             </div>
         </div>
     </div>
-
+    
     <footer>
-        <p>© 2025 Siyaulhaque | Let's Connect and Explore Together</p>
+        &copy; 2025 Your Company Name. All rights reserved.
     </footer>
 </body>
 </html>
