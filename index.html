@@ -13,7 +13,7 @@
     <!-- Load the Header Panel -->
     <div id="menu-container"></div>
     <script>
-    fetch('menu/menu.html')
+    fetch('/menu/menu.html')
         .then(response => response.text())
         .then(html => {
             document.getElementById('menu-container').innerHTML = html;
