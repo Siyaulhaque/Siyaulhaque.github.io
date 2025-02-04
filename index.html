@@ -5,12 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Website</title>
     <link rel="stylesheet" href="styles/index.css">
-    <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/article-card.css">
 </head>
 <body>
 
-     <!-- Sidebar Toggle Button -->
+    <!-- Sidebar Toggle Button -->
     <div id="sidebar-icon">&#9776;</div>
     
     <!-- Sidebar Navigation -->
@@ -39,7 +38,7 @@
         <p>© 2025 Siyaulhaque</p>
     </footer>
 
-    <!-- JavaScript for Dynamic Article Cards -->
+    <!-- JavaScript for Dynamic Article Cards and Sidebar -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             const blogs = [
@@ -76,7 +75,6 @@
             });
         });
 
-        <script>
         document.getElementById("sidebar-icon").addEventListener("click", function () {
             document.getElementById("sidebar").classList.toggle("active");
             this.classList.toggle("small");
