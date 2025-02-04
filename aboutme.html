@@ -16,6 +16,12 @@
             .then(response => response.text())
             .then(html => {
                 document.getElementById('menu-container').innerHTML = html;
+                
+                // Ensure menu.js runs only after menu.html is loaded
+                const script = document.createElement("script");
+                script.src = "menu/menu.js";
+                script.defer = true;
+                document.body.appendChild(script);
             });
     </script>
 
@@ -48,9 +54,6 @@
             </div>
         </div>
     </div>
-
-    <!-- Link JavaScript for Menu Functionality -->
-    <script defer src="menu/menu.js"></script>
 
 </body>
 </html>
