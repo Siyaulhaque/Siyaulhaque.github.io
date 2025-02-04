@@ -29,7 +29,7 @@ body {
 .logo {
     height: 70px; /* Larger logo size */
     position: absolute;
-    bottom: -40px; /* Moves part of the logo outside the panel */
+    bottom: -60px; /* Moves part of the logo outside the panel */
     left: 10px; /* Keeps logo on the left */
 }
 
