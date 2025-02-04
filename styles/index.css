@@ -27,10 +27,10 @@ body {
 }
 
 .logo {
-    height: 80px; /* Keep size */
+    height: 70px; /* Larger logo size */
     position: absolute;
-    bottom: -20px; /* Moves part of the logo outside the **lower** panel */
-    left: 10px; /* Keep logo aligned left */
+    bottom: -40px; /* Moves part of the logo outside the panel */
+    left: 10px; /* Keeps logo on the left */
 }
 
 /* Navigation Styling */
@@ -57,6 +57,18 @@ body {
     transform: scale(1.05);
 }
 
+/* Fade-in Effect */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
     .header {
@@ -68,12 +80,62 @@ body {
 
     .logo {
         position: static;
-        height: 70px; /* Adjust for mobile */
+        height: 100px; /* Adjust for mobile */
     }
 
     .nav-container {
         flex-direction: column;
         gap: 10px;
-        margin-left: 0; /* Remove extra space for mobile */
     }
+}
+
+/* Hero Section */
+.hero {
+    background: url('page-image-elements/banner.png') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #388E3C;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn:hover {
+    background: #1B5E20;
+    transform: scale(1.05);
+}
+
+/* About Section */
+.about {
+    padding: 40px;
+    background: white;
+}
+
+.about img {
+    width: 150px;
+    border-radius: 50%;
+}
+
+/* Footer */
+footer {
+    background: #2E7D32;
+    color: white;
+    padding: 10px;
+    margin-top: 20px;
 }
