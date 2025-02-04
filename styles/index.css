@@ -80,7 +80,7 @@ body {
 
     .logo {
         position: static;
-        height: 100px; /* Adjust for mobile */
+        height: 120px; /* Adjust for mobile */
     }
 
     .nav-container {
