@@ -12,11 +12,12 @@ body {
 .header {
     position: relative;
     background-color: #333; /* Dark background */
-    height: 60px; /* Header height */
+    height: 70px; /* Increased height */
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the left */
     padding: 10px 20px;
+    gap: 20px; /* Space between logo and nav */
 }
 
 /* Logo Styling */
@@ -26,23 +27,23 @@ body {
 }
 
 .logo {
-    height: 70px; /* Adjust to control logo size */
+    height: 90px; /* Larger logo size */
     position: absolute;
-    bottom: -10px; /* Moves part of the logo outside the panel */
-    left: 10px; /* Adjust horizontal position */
+    bottom: -15px; /* Moves part of the logo outside the panel */
+    left: 10px; /* Keeps logo on the left */
 }
 
 /* Navigation Styling */
 .nav-container {
     display: flex;
-    gap: 15px;
+    gap: 10px; /* Reduced gap for closer alignment */
 }
 
 .nav-btn {
     background: #388E3C;
     color: white;
     border: none;
-    padding: 8px 15px;
+    padding: 10px 18px;
     font-size: 16px;
     cursor: pointer;
     border-radius: 5px;
@@ -72,11 +73,12 @@ body {
         flex-direction: column;
         align-items: center;
         height: auto;
+        gap: 10px;
     }
 
     .logo {
         position: static;
-        height: 60px; /* Adjust for mobile */
+        height: 80px; /* Adjust for mobile */
     }
 
     .nav-container {
