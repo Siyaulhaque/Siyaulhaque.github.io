@@ -1,29 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Navigation Menu</title>
-    <link rel="stylesheet" href="menu/menu.css">
-    <script defer src="menu/menu.js"></script>
-</head>
-<body>
-    <header class="header">
-        <div class="logo" onclick="location.href='index.html'">
-            <img src="logo.png" alt="Logo">
-        </div>
-        <nav>
-            <ul class="nav-links">
-                <li><button class="nav-btn" data-target="about">About Me</button></li>
-                <li><button class="nav-btn" data-target="blogs">Blogs</button></li>
-                <li><button class="nav-btn" data-target="contact">Contact</button></li>
-            </ul>
-        </nav>
-    </header>
-    <div class="dropdown-panel">
-        <div class="dropdown-content" id="about">About Me Section</div>
-        <div class="dropdown-content" id="blogs">Blogs Section</div>
-        <div class="dropdown-content" id="contact">Contact Section</div>
+<!-- Menu Navigation -->
+<div class="header">
+    <button class="logo-btn" onclick="window.location.href='index.html'">S</button>
+    <div class="nav-container">
+        <button class="nav-btn" onclick="window.location.href='aboutme.html'">About Me</button>
+        <button class="nav-btn" onclick="window.location.href='blog.html'">Blog</button>
+        <button class="nav-btn" onclick="window.location.href='contact.html'">Contact</button>
     </div>
-</body>
-</html>
+</div>
+
+<!-- Dropdown Panel -->
+<div class="dropdown-panel" id="dropdownPanel"></div>
+
+<script src="menu.js"></script>
