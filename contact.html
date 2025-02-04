@@ -101,31 +101,15 @@
 </head>
 <body>
 
-    <!-- Load the Header Panel -->
-    <div id="menu-container"></div>
-    <script>
-    fetch('/menu/menu.html')
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! Status: ${response.status}`);
-            }
-            return response.text();
-        })
-        .then(html => {
-            document.getElementById('menu-container').innerHTML = html;
-            console.log("✅ Menu loaded successfully!");
-            loadMenuScript(); // Load menu.js after inserting menu HTML
-        })
-        .catch(error => console.error("❌ Error loading menu:", error));
-
-    function loadMenuScript() {
-        const script = document.createElement('script');
-        script.src = '/menu/menu.js';
-        script.defer = true;
-        document.body.appendChild(script);
-        console.log("✅ menu.js loaded successfully!");
-    }
-</script>
+    <!-- Simple Header Panel -->
+    <header class="header">
+        <button class="logo-btn" onclick="window.location.href='index.html'">S</button>
+        <nav class="nav-container">
+            <button class="nav-btn" onclick="window.location.href='aboutme.html'">About Me</button>
+            <button class="nav-btn" onclick="window.location.href='blog.html'">Blog</button>
+            <button class="nav-btn" onclick="window.location.href='contact.html'">Contact</button>
+        </nav>
+    </header>
 
     <!-- Contact Section -->
     <div class="contact-container">
@@ -166,9 +150,6 @@
     <footer>
         <p>© 2025 Siyaulhaque | Let's Connect and Explore Together</p>
     </footer>
-
-    <!-- Link JavaScript for Menu Functionality -->
-    <script defer src="menu/menu.js"></script>
 
 </body>
 </html>
