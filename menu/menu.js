@@ -2,37 +2,23 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownPanel = document.getElementById("dropdownPanel");
     const navButtons = document.querySelectorAll(".nav-btn");
     const logoButton = document.getElementById("logoButton");
-    let currentPage = window.location.pathname.split("/").pop().toLowerCase(); // Normalize case
+    const currentPage = window.location.pathname.split("/").pop().toLowerCase();
 
-    console.log("Current Page:", currentPage); // Debugging log
-
+    // Highlight the active page button
     navButtons.forEach(button => {
-        let buttonPage = button.getAttribute("data-page").toLowerCase(); // Normalize case
+        let buttonPage = button.getAttribute("data-page").toLowerCase();
 
         if (buttonPage === currentPage) {
-            console.log("Active Button Found:", buttonPage); // Debugging log
             button.classList.add("active-nav");
         }
 
+        // Ensure proper redirection without affecting dropdown
         button.addEventListener("click", function() {
-            dropdownPanel.classList.toggle("active");
+            window.location.href = buttonPage;
         });
     });
 
-    // Navigation button redirects
-    document.getElementById("aboutBtn").addEventListener("click", function() {
-        window.location.href = "aboutme.html";
-    });
-    
-    document.getElementById("blogBtn").addEventListener("click", function() {
-        window.location.href = "blog.html";
-    });
-    
-    document.getElementById("contactBtn").addEventListener("click", function() {
-        window.location.href = "contact.html";
-    });
-
-    // Logo redirects to homepage
+    // Ensure logo button redirects to homepage
     logoButton.addEventListener("click", function() {
         window.location.href = "index.html";
     });
