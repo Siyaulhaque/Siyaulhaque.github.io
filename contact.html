@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Siyaulhaque | Contact</title>
-    <link rel="stylesheet" href="styles/sidebar.css">
     <link rel="stylesheet" href="styles/contact.css"> 
+    <link rel="stylesheet" href="menu/menu.css"> <!-- New Header Styles -->
     <style>
         /* Contact Page Styles */
         body {
@@ -101,18 +101,15 @@
 </head>
 <body>
 
-    <!-- Sidebar Toggle Button -->
-    <div id="sidebar-icon">&#9776;</div>
-    
-    <!-- Sidebar Navigation -->
-    <nav id="sidebar">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="aboutme.html">About</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <!-- Load the Header Panel -->
+    <div id="menu-container"></div>
+    <script>
+        fetch('menu/menu.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('menu-container').innerHTML = html;
+            });
+    </script>
 
     <!-- Contact Section -->
     <div class="contact-container">
@@ -154,11 +151,8 @@
         <p>© 2025 Siyaulhaque | Let's Connect and Explore Together</p>
     </footer>
 
-    <script>
-        document.getElementById("sidebar-icon").addEventListener("click", function () {
-            document.getElementById("sidebar").classList.toggle("active");
-            this.classList.toggle("small");
-        });
-    </script>
+    <!-- Link JavaScript for Menu Functionality -->
+    <script defer src="menu/menu.js"></script>
+
 </body>
 </html>
