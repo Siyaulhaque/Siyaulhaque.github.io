@@ -2,11 +2,15 @@ document.addEventListener("DOMContentLoaded", function() {
     const dropdownPanel = document.getElementById("dropdownPanel");
     const navButtons = document.querySelectorAll(".nav-btn");
     const logoButton = document.getElementById("logoButton");
-    const currentPage = window.location.pathname.split("/").pop();
+    let currentPage = window.location.pathname.split("/").pop().toLowerCase(); // Normalize case
+
+    console.log("Current Page:", currentPage); // Debugging log
 
     navButtons.forEach(button => {
-        // Highlight the active page button
-        if (button.getAttribute("data-page") === currentPage) {
+        let buttonPage = button.getAttribute("data-page").toLowerCase(); // Normalize case
+
+        if (buttonPage === currentPage) {
+            console.log("Active Button Found:", buttonPage); // Debugging log
             button.classList.add("active-nav");
         }
 
@@ -15,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     });
 
-    // Ensure navigation buttons redirect correctly
+    // Navigation button redirects
     document.getElementById("aboutBtn").addEventListener("click", function() {
         window.location.href = "aboutme.html";
     });
@@ -28,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function() {
         window.location.href = "contact.html";
     });
 
-    // Ensure logo button redirects to homepage
+    // Logo redirects to homepage
     logoButton.addEventListener("click", function() {
         window.location.href = "index.html";
     });
