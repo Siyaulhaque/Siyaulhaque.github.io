@@ -91,7 +91,7 @@ body {
 
 /* Main Content Section */
 .main-content {
-    margin-top: 50px; /* Allows easy modification */
+    margin-top: 100px; /* Allows easy modification */
 }
 
 /* Contact Container */
@@ -128,7 +128,7 @@ p {
 
 .contact-form input, .contact-form textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     margin-top: 5px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -152,7 +152,7 @@ p {
 
 /* Social Media Section */
 .social-section {
-    margin-top: 40px;
+    margin-top: 30px;
     padding: 20px;
     background: #ecf0f1;
     border-radius: 10px;
