@@ -165,7 +165,7 @@ body {
 
 /* Footer */
 .footer {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
@@ -183,7 +183,7 @@ body {
     display: block;
     height: 50px; /* Adjusted size to fit within footer */
     width: auto;
-    max-width: 100%;
+    max-width: 200px;
 }
 
 /* Footer Text */
