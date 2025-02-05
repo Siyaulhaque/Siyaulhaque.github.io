@@ -9,19 +9,14 @@ body {
 
 /* Header Panel */
 .header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px; /* Correct height */
-    background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
+    position: relative;
+    background-color: #333; /* Dark background */
+    height: 70px; /* Increased height */
     display: flex;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0px 20px;
-    z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    gap: 20px;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 10px 20px;
+    gap: 20px; /* Space between logo and nav */
 }
 
 /* Logo Styling */
@@ -163,10 +158,6 @@ body {
 /* Footer */
 .footer {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 50px; /* Correct height */
     background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
     color: white;
     padding: 20px;
