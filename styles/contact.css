@@ -1,9 +1,9 @@
 /* General Page Styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: "Times New Roman", Times, serif;
     margin: 0;
     padding: 0;
-    background: #f4f4f4;
+    background: #1B5E20;
     text-align: center;
     min-height: 100vh;
     display: flex;
