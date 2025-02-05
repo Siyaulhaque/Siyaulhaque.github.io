@@ -178,12 +178,27 @@ body {
     min-height: 60px;
 }
 
+/* Footer */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 60px;
+}
+
 /* Footer Banner */
 .footer-banner {
     display: block;
     height: 50px; /* Adjusted size to fit within footer */
     width: auto;
-    max-width: 200px;
+    max-width: 100%;
 }
 
 /* Footer Text */
