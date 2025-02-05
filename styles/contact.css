@@ -154,3 +154,29 @@ body {
     background: #34495e;
     transform: scale(1.05);
 }
+
+/* Footer */
+.footer {
+    background-color: #333; /* Same as header panel */
+    color: white;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Footer Banner */
+.footer-banner {
+    display: block;
+    height: 50px; /* Adjusted size to fit within footer */
+    width: auto;
+    max-width: 100%;
+}
+
+.footer-text {
+    font-size: 1rem;
+    text-align: center;
+    flex-grow: 1;
+}
+
