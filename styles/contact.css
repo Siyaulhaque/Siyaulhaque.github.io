@@ -5,18 +5,21 @@ body {
     padding: 0;
     background: #f4f4f4;
     text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Header Panel */
 .header {
     position: relative;
-    background-color: #333; /* Dark background */
-    height: 70px; /* Increased height */
+    background-color: #333;
+    height: 70px;
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start;
     padding: 10px 20px;
-    gap: 20px; /* Space between logo and nav */
+    gap: 20px;
 }
 
 /* Logo Styling */
@@ -57,40 +60,9 @@ body {
     transform: scale(1.05);
 }
 
-/* Fade-in Effect */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column;
-        align-items: center;
-        height: auto;
-        gap: 10px;
-    }
-
-    .logo {
-        position: static;
-        height: 120px;
-    }
-
-    .nav-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
 /* Main Content Section */
 .main-content {
+    flex-grow: 1; /* Ensures content expands to push footer down */
     margin-top: 120px;
 }
 
@@ -111,14 +83,6 @@ body {
     margin-bottom: 15px;
 }
 
-/* Header Banner */
-.header-banner {
-    width: 100%; /* Make it full-width */
-    max-height: 400px; /* Restrict height */
-    object-fit: cover; /* Ensures it scales properly */
-    display: block;
-}
-
 /* Google Form Embed */
 .contact-container iframe {
     width: 100%;
@@ -127,7 +91,7 @@ body {
     border-radius: 10px;
 }
 
-    /* Social Media Section */
+/* Social Media Section */
 .social-section {
     padding: 20px;
     background: #ecf0f1;
@@ -165,50 +129,34 @@ body {
 
 /* Footer */
 .footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
-    background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
+    background-color: rgba(10, 40, 60, 0.85);
     color: white;
     padding: 10px 20px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-end;
     flex-wrap: wrap;
     min-height: 60px;
-}
-
-/* Footer */
-.footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
-    color: white;
-    padding: 10px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    min-height: 60px;
+    margin-top: auto; /* Ensures footer stays at bottom when scrolling */
 }
 
 /* Footer Banner */
 .footer-banner {
     display: block;
-    height: 50px; /* Adjusted size to fit within footer */
+    height: 50px;
     width: auto;
     max-width: 100%;
+    margin-right: 15px; /* Adds spacing between the image and text */
 }
 
 /* Footer Text */
 .footer-text {
     font-size: 1rem;
-    text-align: center;
-    flex-grow: 1;
+    text-align: right;
 }
 
 /* Prevent content from being hidden behind footer */
 body {
-    padding-bottom: 80px; /* Adjust based on footer height */
+    padding-bottom: 0;
 }
