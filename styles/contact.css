@@ -65,15 +65,10 @@ body {
     margin-top: 120px;
 }
 
-/* Main Content Section */
-.main-content {
-    margin-top: 120px;
-}
-
 /* Contact Container */
 .contact-container {
-    max-width: 900px;
-    margin: 80px auto;
+    max-width: 1200px;
+    margin: 100px auto;
     padding: 40px;
     background: white;
     border-radius: 15px;
