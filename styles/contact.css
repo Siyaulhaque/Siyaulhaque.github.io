@@ -62,7 +62,6 @@ body {
 
 /* Main Content Section */
 .main-content {
-    flex-grow: 1; /* Ensures content expands to push footer down */
     margin-top: 120px;
 }
 
