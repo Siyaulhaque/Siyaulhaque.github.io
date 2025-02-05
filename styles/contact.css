@@ -124,3 +124,39 @@ body {
     height: 850px;
     border: none;
     border-radius: 10px;
+
+    /* Social Media Section */
+.social-section {
+    margin-top: 30px;
+    padding: 20px;
+    background: #ecf0f1;
+    border-radius: 10px;
+}
+
+.social-section h2 {
+    color: #1B5E20;
+    font-size: 1.5rem;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+}
+
+.social-links a {
+    text-decoration: none;
+    background: #2c3e50;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.social-links a:hover {
+    background: #34495e;
+    transform: scale(1.05);
+}
