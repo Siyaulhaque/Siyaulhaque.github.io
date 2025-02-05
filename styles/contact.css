@@ -111,12 +111,12 @@ body {
     margin-bottom: 15px;
 }
 
-.form-banner {
-    width: 100%;
-    max-width: 800px; /* Adjust as needed */
+/* Header Banner */
+.header-banner {
+    width: 100%; /* Make it full-width */
+    max-height: 400px; /* Restrict height */
+    object-fit: cover; /* Ensures it scales properly */
     display: block;
-    margin: 0 auto 20px;
-    border-radius: 10px;
 }
 
 /* Google Form Embed */
