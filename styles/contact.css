@@ -9,13 +9,18 @@ body {
 
 /* Header Panel */
 .header {
-    position: relative;
-    background-color: #333;
-    height: 70px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Correct height */
+    background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    padding: 10px 20px;
+    padding: 0px 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     gap: 20px;
 }
 
@@ -157,7 +162,12 @@ body {
 
 /* Footer */
 .footer {
-    background-color: #333; /* Same as header panel */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px; /* Correct height */
+    background-color: rgba(10, 40, 60, 0.85); /* Dark marine blue with transparency */
     color: white;
     padding: 20px;
     display: flex;
@@ -176,7 +186,8 @@ body {
 
 .footer-text {
     font-size: 1rem;
-    text-align: center;
+    text-align: right;
+    right: 10px;
     flex-grow: 1;
 }
 
