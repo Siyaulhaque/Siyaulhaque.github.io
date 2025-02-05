@@ -121,11 +121,10 @@ body {
 
     /* Social Media Section */
 .social-section {
-    margin-top: 10px;
     padding: 20px;
     background: #ecf0f1;
     border-radius: 10px;
-    margin-bottom: 10px;
+    margin-bottom: 30px;
 }
 
 .social-section h2 {
