@@ -91,13 +91,13 @@ body {
 
 /* Main Content Section */
 .main-content {
-    margin-top: 100px; /* Allows easy modification */
+    margin-top: 120px; /* Allows easy modification */
 }
 
 /* Contact Container */
 .contact-container {
     max-width: 800px;
-    margin: 50px auto;
+    margin: 80px auto;
     padding: 40px;
     background: white;
     border-radius: 15px;
@@ -178,9 +178,6 @@ p {
     padding: 10px 15px;
     border-radius: 5px;
     font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    gap: 8px; /* Space between icon and text */
     transition: background 0.3s, transform 0.2s;
 }
 
