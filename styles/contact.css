@@ -82,7 +82,7 @@ body {
 
 /* Google Form Embed */
 .contact-container iframe {
-    width: 100%;
+    width: 600px;
     height: 1500px;
     border: none;
     border-radius: 10px;
