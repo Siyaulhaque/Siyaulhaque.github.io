@@ -177,8 +177,6 @@ body {
 
 .footer-text {
     font-size: 1rem;
-    text-align: right;
-    right: 10px;
+    text-align: center;
     flex-grow: 1;
 }
-
