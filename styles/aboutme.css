@@ -267,12 +267,18 @@ body {
 }
 
 .carousel-btn {
-    width: 40px;
-    height: 40px;
-    font-size: 1.2em;
-    border-radius: 50%;
-    transition: background 0.3s;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
 }
+
+.prev { left: 10px; }
+.next { right: 10px; }
 
 .carousel-btn:hover {
     background: rgba(255, 255, 255, 0.7);
