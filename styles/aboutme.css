@@ -217,22 +217,27 @@ body {
     align-items: center;
     padding: 40px 0;
     margin-bottom: 80px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
+               0 -4px 8px rgba(0, 0, 0, 0.3);
 }
 
 .carousel-text {
     color: white;
     max-width: 40%;
     padding-left: 50px;
+    text-align: left;
+    align-self: flex-start;
 }
 
 .carousel-text h2 {
     font-size: 2em;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .carousel-text p {
     font-size: 1.2em;
+    text-align: left;
 }
 
 .carousel-container {
