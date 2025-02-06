@@ -81,6 +81,10 @@ body {
     margin-bottom: 50px;
 }
 
+.contact-container h1 {
+    color: #1B5E20; /* Change this to any color you prefer */
+}
+
 /* Google Form Embed */
 .contact-container iframe {
     width: 900px;
@@ -129,7 +133,7 @@ body {
 /* Footer */
 .footer {
     width: 100%;
-    background-color: rgba(10, 40, 60, 0.85);
+    background-color: rgba(10, 40, 60, 0.2);
     color: white;
     padding: 10px 20px;
     display: flex;
