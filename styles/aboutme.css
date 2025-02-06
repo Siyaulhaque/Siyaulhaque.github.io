@@ -209,17 +209,25 @@ body {
     }
 }
 
+.carousel-banner {
+    width: 100%;
+    background-color: #013a63; /* Dark marine blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+}
+
 .carousel-container {
     position: relative;
-    width: 100%;
+    width: 900px;
+    height: 1200px;
     overflow: hidden;
-    max-width: 800px;
-    margin: auto;
 }
 
 .carousel-wrapper {
     display: flex;
-    width: 500%; /* Since there are 5 images */
+    width: 500%; /* 5 images */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -229,7 +237,9 @@ body {
 }
 
 .carousel-slide img {
-    width: 20%; /* Each image takes 1/5th of the container */
+    width: 900px;
+    height: 1200px;
+    object-fit: cover;
     flex: 0 0 auto;
 }
 
