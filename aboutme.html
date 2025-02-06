@@ -101,28 +101,33 @@
    <!-- Map Script -->
    <script>
   // Initialize the map and set view to Avalanche, Nilgiris
-  var map = L.map('exploredMap').setView([11.3074, 76.5292], 10); 
+var map = L.map('exploredMap').setView([11.3074, 76.5292], 10); 
 
-  // Add OpenStreetMap tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+// Add OpenStreetMap tile layer
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  attribution: '&copy; OpenStreetMap contributors'
+}).addTo(map);
 
-  // Define the explored area (Avalanche, Nilgiris)
-  var exploredAreas = [
-    { name: "Avalanche, Nilgiris", lat: 11.3074, lon: 76.5292, color: "blue" }
-  ];
+// Define the explored area (Avalanche, Nilgiris)
+var exploredAreas = [
+  { name: "Avalanche, Nilgiris", lat: 11.3074, lon: 76.5292, color: "blue" }
+];
 
-  // Add colored circles for explored locations
-  exploredAreas.forEach(function (area) {
-    L.circle([area.lat, area.lon], {
-      color: area.color,
-      fillColor: area.color,
-      fillOpacity: 0.5,
-      radius: 10000 // Adjust radius for visibility
-    }).addTo(map)
-      .bindPopup(area.name); // Name appears when clicked
-  });
+// Add colored circles for explored locations
+exploredAreas.forEach(function (area) {
+  L.circle([area.lat, area.lon], {
+    color: area.color,
+    fillColor: area.color,
+    fillOpacity: 0.5,
+    radius: 10000 // Adjust radius for visibility
+  }).addTo(map)
+    .bindPopup(area.name); // Name appears when clicked
+});
+
+// Fix map display issue
+setTimeout(() => { 
+  map.invalidateSize(); 
+}, 400);
 </script>
 
    <!-- CSS for Map Alignment -->
