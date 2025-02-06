@@ -208,3 +208,66 @@ body {
         margin-top: 100px; /* Adjust based on header height */
     }
 }
+
+.carousel-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-width: 800px;
+    margin: auto;
+}
+.carousel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.carousel-slide img {
+    width: 100%;
+    flex-shrink: 0;
+}
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+.prev { left: 10px; }
+.next { right: 10px; }
+
+/* Footer */
+.footer {
+    width: 100%;
+    background-color: rgba(10, 40, 60,1);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 60px;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+/* Footer Banner (Left-aligned and full height of footer) */
+.footer-banner {
+    height: 100%;
+    width: auto;
+    max-height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Text (Now correctly positioned inside the footer) */
+.footer-text {
+    font-size: 1rem;
+    text-align: right;
+    margin-left: auto;
+    padding-right: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 100px);
+}
