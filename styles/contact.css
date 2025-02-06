@@ -13,7 +13,7 @@ body {
 /* Header Panel */
 .header {
     position: relative;
-    background-color: #333;
+    background-color: rgba(10, 40, 60, 0.6);
     height: 70px;
     display: flex;
     align-items: center;
@@ -117,8 +117,8 @@ body {
 
 .social-links a {
     text-decoration: none;
-    background: #2c3e50;
-    color: white;
+    background: rgba(10, 40, 60, 1); /* Updated background color */
+    color: white; /* Font color remains the same */
     padding: 10px 15px;
     border-radius: 5px;
     font-weight: bold;
@@ -126,7 +126,7 @@ body {
 }
 
 .social-links a:hover {
-    background: #34495e;
+    background: rgba(10, 50, 70, 1); /* Slightly lighter shade for hover effect */
     transform: scale(1.05);
 }
 
