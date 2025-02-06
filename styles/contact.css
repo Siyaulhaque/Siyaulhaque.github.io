@@ -133,7 +133,7 @@ body {
 /* Footer */
 .footer {
     width: 100%;
-    background-color: rgba(10, 40, 60,);
+    background-color: rgb(10, 40, 60,);
     color: white;
     padding: 10px 20px;
     display: flex;
