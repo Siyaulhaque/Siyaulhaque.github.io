@@ -226,7 +226,7 @@ body {
     max-width: 40%;
     padding-left: 50px;
     text-align: left;
-    align-self: flex-start;
+    align-items: flex-start;
 }
 
 .carousel-text h2 {
@@ -250,7 +250,7 @@ body {
 
 .carousel-wrapper {
     display: flex;
-    width: 500%; /* 5 images */
+    width: calc(100% * 5);/* total number of images */
     transition: transform 0.5s ease-in-out;
 }
 
@@ -267,18 +267,17 @@ body {
 }
 
 .carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2em;
+    border-radius: 50%;
+    transition: background 0.3s;
 }
 
-.prev { left: 10px; }
-.next { right: 10px; }
+.carousel-btn:hover {
+    background: rgba(255, 255, 255, 0.7);
+    color: black;
+}
 
 /* Footer */
 .footer {
