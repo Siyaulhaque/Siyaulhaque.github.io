@@ -11,7 +11,7 @@ body {
 /* Header Panel */
 .header {
     position: relative;
-    background-color: #333; /* Dark background */
+    background-color: rgba(10, 40, 60, 0.6);
     height: 70px; /* Increased height */
     display: flex;
     align-items: center;
@@ -31,7 +31,7 @@ body {
     position: absolute;
     bottom: -60px; /* Moves part of the logo outside the panel */
     left: 10px; /* Keeps logo on the left */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Added shadow */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Added shadow */
 }
 
 /* Navigation Styling */
@@ -134,9 +134,36 @@ body {
 }
 
 /* Footer */
-footer {
-    background: #2E7D32;
+.footer {
+    width: 100%;
+    background-color: rgba(10, 40, 60,1);
     color: white;
-    padding: 10px;
-    margin-top: 20px;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    min-height: 60px;
+    margin-top: auto;
+    box-sizing: border-box;
+}
+
+/* Footer Banner (Left-aligned and full height of footer) */
+.footer-banner {
+    height: 100%;
+    width: auto;
+    max-height: 80px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer Text (Now correctly positioned inside the footer) */
+.footer-text {
+    font-size: 1rem;
+    text-align: right;
+    margin-left: auto;
+    padding-right: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: calc(100% - 100px);
 }
