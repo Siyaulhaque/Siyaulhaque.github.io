@@ -14,116 +14,135 @@
 <body>
 
    <!-- Simple Header Panel -->
-<header class="header">
-    <a href="index.html" class="logo-link">
-        <img src="page-image-elements/logo.png" alt="Logo" class="logo">
-    </a>
-    <nav class="nav-container">
-        <button class="nav-btn" onclick="window.location.href='aboutme.html'">About Me</button>
-        <button class="nav-btn" onclick="window.location.href='blog.html'">Blog</button>
-        <button class="nav-btn" onclick="window.location.href='contact.html'">Contact</button>
-    </nav>
-</header>
+   <header class="header">
+       <a href="index.html" class="logo-link">
+           <img src="page-image-elements/logo.png" alt="Logo" class="logo">
+       </a>
+       <nav class="nav-container">
+           <button class="nav-btn" onclick="window.location.href='aboutme.html'">About Me</button>
+           <button class="nav-btn" onclick="window.location.href='blog.html'">Blog</button>
+           <button class="nav-btn" onclick="window.location.href='contact.html'">Contact</button>
+       </nav>
+   </header>
     
-    <!-- Main Content -->
-    <div class="main-content">
-        <!-- About Me Section -->
-        <div class="about-container">
-            <img src="page-image-elements/profile.png" alt="Profile Picture of Siya ul Haque" class="profile-pic">
-            <h2 class="typing-effect">About Me</h2>
-            <p>I’m Siya ul Haque, a naturalist and explorer with countless stories from my time in the wild. While I don’t consider myself a writer, this space is my effort to document and share my experiences—observations from nature, encounters with wildlife, and the places I’ve traveled.</p>
+   <!-- Main Content -->
+   <div class="main-content">
+       <!-- About Me Section -->
+       <div class="about-container">
+           <img src="page-image-elements/profile.png" alt="Profile Picture of Siya ul Haque" class="profile-pic">
+           <h2 class="typing-effect">About Me</h2>
+           <p>I’m Siya ul Haque, a naturalist and explorer with countless stories from my time in the wild. While I don’t consider myself a writer, this space is my effort to document and share my experiences—observations from nature, encounters with wildlife, and the places I’ve traveled.</p>
 
-            <p>Beyond exploration, this blog also serves as a journal—a place to capture memorable moments with people, sharing photos and reflections like a diary. Every interaction, every journey, and every story holds meaning, and this is where I keep those memories alive.</p>
+           <p>Beyond exploration, this blog also serves as a journal—a place to capture memorable moments with people, sharing photos and reflections like a diary. Every interaction, every journey, and every story holds meaning, and this is where I keep those memories alive.</p>
 
-            <p>This is a collection of nature, life, and the wonders that inspire me.</p>
+           <p>This is a collection of nature, life, and the wonders that inspire me.</p>
             
-            <!-- Skills Section -->
-            <div class="skills-container">
-                <div class="skill">Exploring Biodiversity</div>
-                <div class="skill">Documentation</div>
-                <div class="skill">Conservation</div>
-                <div class="skill">Nature Education</div>
-            </div>
+           <!-- Skills Section -->
+           <div class="skills-container">
+               <div class="skill">Exploring Biodiversity</div>
+               <div class="skill">Documentation</div>
+               <div class="skill">Conservation</div>
+               <div class="skill">Nature Education</div>
+           </div>
             
-            <!-- CV Download Button -->
-            <a href="page-image-elements/cv.pdf" download class="btn">Download My CV</a>
+           <!-- CV Download Button -->
+           <a href="page-image-elements/cv.pdf" download class="btn">Download My CV</a>
             
-            <!-- Contact Section -->
-            <div class="contact-section">
-                <p>Want to connect? Reach out to me via the <a href="contact.html">Contact Page</a>.</p>
-            </div>
-        </div>
-    </div>
+           <!-- Contact Section -->
+           <div class="contact-section">
+               <p>Want to connect? Reach out to me via the <a href="contact.html">Contact Page</a>.</p>
+           </div>
+       </div>
+   </div>
 
-    <!-- Image Carousel Section -->
-<div class="carousel-banner">
-    <div class="carousel-text">
-        <h2>My Photography Collection</h2>
-        <p>A glimpse into my journeys, capturing the beauty of nature and exploration.</p>
-    </div>
-    <div class="carousel-container">
-        <div class="carousel-wrapper">
-            <div class="carousel-slide">
-                <img src="page-image-elements/profile.png" alt="Image 1">
-                <img src="page-image-elements/profile.png" alt="Image 2">
-                <img src="page-image-elements/profile.png" alt="Image 3">
-                <img src="page-image-elements/profile.png" alt="Image 4">
-                <img src="page-image-elements/profile.png" alt="Image 5">
-            </div>
-        </div>
-        <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
-        <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
-    </div>
-</div>
+   <!-- Image Carousel Section -->
+   <div class="carousel-banner">
+       <div class="carousel-text">
+           <h2>My Photography Collection</h2>
+           <p>A glimpse into my journeys, capturing the beauty of nature and exploration.</p>
+       </div>
+       <div class="carousel-container">
+           <div class="carousel-wrapper">
+               <div class="carousel-slide">
+                   <img src="page-image-elements/profile.png" alt="Image 1">
+                   <img src="page-image-elements/profile.png" alt="Image 2">
+                   <img src="page-image-elements/profile.png" alt="Image 3">
+                   <img src="page-image-elements/profile.png" alt="Image 4">
+                   <img src="page-image-elements/profile.png" alt="Image 5">
+               </div>
+           </div>
+           <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+           <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
+       </div>
+   </div>
 
-<!-- Link the external JavaScript file -->
-<script src="scripts/carousel.js"></script>
+   <!-- Link the external JavaScript file -->
+   <script src="scripts/carousel.js"></script>
 
-    <h2>Places I Have Explored</h2>
-<p>This map highlights the regions I have explored or worked in. As I continue my journey, more places will be added!</p>
+   <!-- Places Explored Section -->
+   <div class="map-section">
+       <h2>Places I Have Explored</h2>
+       <p>This map highlights the regions I have explored or worked in. As I continue my journey, more places will be added!</p>
 
-<!-- Map Container -->
-    <div style="display: flex; justify-content: center; align-items: center;">
-        <div id="exploredMap" 
-    style="width: 100%;
-    max-width: 1000px;
-    height: 500px; 
-    border-radius: 20px;
-    margin-bottom: 80px; ">
-    </div>
+       <!-- Centered Map Container -->
+       <div class="map-container">
+           <div id="exploredMap"></div>
+       </div>
+   </div>
 
-<script>
-  // Initialize the map and set view to Avalanche, Nilgiris
-  var map = L.map('exploredMap').setView([11.3074, 76.5292], 10); 
+   <!-- Footer -->
+   <footer class="footer">
+       <a href="index.html">
+           <img src="page-image-elements/echoes-banner.png" alt="Home" class="footer-banner">
+       </a>
+       <p class="footer-text">© 2025 Echoes of the Frog</p>
+   </footer>
 
-  // Add OpenStreetMap tile layer
-  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '&copy; OpenStreetMap contributors'
-  }).addTo(map);
+   <!-- Map Script -->
+   <script>
+       // Initialize the map and set view to Avalanche, Nilgiris
+       var map = L.map('exploredMap').setView([11.3074, 76.5292], 10); 
 
-  // Define the explored area (Avalanche, Nilgiris)
-  var exploredAreas = [
-    { name: "Avalanche, Nilgiris", lat: 11.3074, lon: 76.5292, color: "blue" }
-  ];
+       // Add OpenStreetMap tile layer
+       L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+           attribution: '&copy; OpenStreetMap contributors'
+       }).addTo(map);
 
-  // Add colored circles for explored locations
-  exploredAreas.forEach(function (area) {
-    L.circle([area.lat, area.lon], {
-      color: area.color,
-      fillColor: area.color,
-      fillOpacity: 0.5,
-      radius: 10000 // Adjust radius for visibility
-    }).addTo(map)
-      .bindPopup(area.name); // Name appears when clicked
-  });
-</script>
+       // Define the explored area (Avalanche, Nilgiris)
+       var exploredAreas = [
+           { name: "Avalanche, Nilgiris", lat: 11.3074, lon: 76.5292, color: "blue" }
+       ];
 
-    <footer class="footer">
-    <a href="index.html">
-        <img src="page-image-elements/echoes-banner.png" alt="Home" class="footer-banner">
-    </a>
-    <p class="footer-text">© 2025 Echoes of the Frog</p>
-    </footer>
+       // Add colored circles for explored locations
+       exploredAreas.forEach(function (area) {
+           L.circle([area.lat, area.lon], {
+               color: area.color,
+               fillColor: area.color,
+               fillOpacity: 0.5,
+               radius: 10000 // Adjust radius for visibility
+           }).addTo(map)
+             .bindPopup(area.name); // Name appears when clicked
+       });
+   </script>
+
+   <!-- CSS for Map Alignment -->
+   <style>
+       .map-container {
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           width: 100%;
+           padding: 20px 0;
+       }
+
+       #exploredMap {
+           width: 100%;
+           max-width: 1000px;
+           height: 500px;
+           border-radius: 20px;
+           margin-bottom: 80px;
+       }
+   </style>
 
 </body>
 </html>
