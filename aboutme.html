@@ -79,28 +79,32 @@
 <!-- Link the external JavaScript file -->
 <script src="scripts/carousel.js"></script>
 
-    <div id="exploredMap" style="height: 500px;"></div>
+    <h2>Places I Have Explored</h2>
+<p>This map highlights the regions I have explored or worked in. As I continue my journey, more places will be added!</p>
 
-    <footer class="footer">
-    <a href="index.html">
-        <img src="page-image-elements/echoes-banner.png" alt="Home" class="footer-banner">
-    </a>
-    <p class="footer-text">© 2025 Echoes of the Frog</p>
-    </footer>
+<!-- Map Container -->
+<div id="exploredMap" 
+    style="width: 100%; 
+    height: 500px; 
+    border: 2px solid #333; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3), 
+                0 -4px 8px rgba(0, 0, 0, 0.3); 
+    margin-bottom: 80px; ">
+    </div>
 
-    <script>
-  // Initialize the map and set view to Nilgiris
-  var map = L.map('exploredMap').setView([11.4102, 76.6950], 8); 
+<script>
+  // Initialize the map and set view to Avalanche, Nilgiris
+  var map = L.map('exploredMap').setView([11.3074, 76.5292], 10); 
 
   // Add OpenStreetMap tile layer
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '&copy; OpenStreetMap contributors'
   }).addTo(map);
 
-  // Define the explored areas (example: Nilgiris)
+  // Define the explored area (Avalanche, Nilgiris)
   var exploredAreas = [
-    { name: "Nilgiris", lat: 11.4102, lon: 76.6950, color: "blue" },
-    // Add more locations when explored
+    { name: "Avalanche, Nilgiris", lat: 11.3074, lon: 76.5292, color: "blue" }
   ];
 
   // Add colored circles for explored locations
@@ -114,6 +118,13 @@
       .bindPopup(area.name); // Name appears when clicked
   });
 </script>
+
+    <footer class="footer">
+    <a href="index.html">
+        <img src="page-image-elements/echoes-banner.png" alt="Home" class="footer-banner">
+    </a>
+    <p class="footer-text">© 2025 Echoes of the Frog</p>
+    </footer>
 
 </body>
 </html>
