@@ -216,12 +216,13 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px 0;
+    margin-bottom: 50px;
 }
 
 .carousel-container {
     position: relative;
-    width: 900px;
-    height: 1200px;
+    width: 300px;
+    height: 400px;
     overflow: hidden;
 }
 
