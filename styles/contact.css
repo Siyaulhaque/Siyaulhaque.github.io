@@ -145,7 +145,7 @@ body {
 .footer-banner {
     height: 100%;
     width: auto;
-    max-height: 100px;
+    max-height: 80px;
 }
 
 /* Footer Text (Now correctly positioned inside the footer) */
