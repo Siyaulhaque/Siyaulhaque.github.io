@@ -1,9 +1,12 @@
 let currentIndex = 0;
+const totalSlides = 5; // Number of images
+
 function moveSlide(direction) {
-    const slide = document.querySelector('.carousel-wrapper');
-    const totalImages = document.querySelectorAll('.carousel-slide img').length;
     currentIndex += direction;
-    if (currentIndex < 0) currentIndex = totalImages - 1;
-    if (currentIndex >= totalImages) currentIndex = 0;
-    slide.style.transform = `translateX(-${currentIndex * 100}%)`;
+    
+    if (currentIndex < 0) currentIndex = totalSlides - 1;
+    if (currentIndex >= totalSlides) currentIndex = 0;
+
+    const slide = document.querySelector('.carousel-wrapper');
+    slide.style.transform = `translateX(-${currentIndex * 20}%)`; // 20% per image
 }
