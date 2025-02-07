@@ -163,7 +163,7 @@ body {
 
 /* CV Download Button */
 .about-container .btn {
-    background: var(--primary-color);
+    background: rgba(10, 40, 60,1);
     color: white;
     padding: 14px 28px;
     text-decoration: none;
