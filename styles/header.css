@@ -14,6 +14,7 @@
 .logo-link {
     display: block;
     position: relative;
+    z-index: 10; /* Keeps the logo above other elements */
 }
 
 .logo {
@@ -32,58 +33,70 @@
     margin-left: 100px;
 }
 
-/* General Button Styling */
+/* Navigation Buttons with Smooth Top Border Animation */
 .nav-btn {
-    background: none;
+    background: transparent;
     color: white;
     border: none;
     padding: 10px 18px;
     font-size: 16px;
     cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s, transform 0.2s;
+    position: relative;
+    transition: color 0.3s ease-in-out;
 }
 
-/* Hover Effect */
+.nav-btn::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+}
+
 .nav-btn:hover {
-    background: rgba(255, 255, 255, 0.2);
-    transform: scale(1.05);
+    color: #FFD700; /* Optional hover color change */
 }
 
-/* Dropdown Styling */
+.nav-btn:hover::after {
+    transform: scaleX(1);
+}
+
+/* Dropdown Menu */
 .dropdown {
     position: relative;
-    display: inline-block;
 }
 
-/* Dropdown Content */
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: rgba(10, 40, 60, 0.9);
-    min-width: 160px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    overflow: hidden;
-    z-index: 10;
+    top: 100%;
+    left: 0;
+    width: calc(100vw - 40px); /* Full width, avoiding logo overlap */
+    background: rgba(10, 40, 60, 0.9);
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 5;
 }
 
-/* Dropdown Links */
+/* Links inside dropdown */
 .dropdown-content a {
     display: block;
-    padding: 10px 15px;
-    text-decoration: none;
     color: white;
-    font-size: 14px;
+    padding: 10px;
+    text-decoration: none;
     transition: background 0.3s;
 }
 
-/* Hover Effect for Dropdown Links */
 .dropdown-content a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-/* Show Dropdown on Hover */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
     display: block;
 }
