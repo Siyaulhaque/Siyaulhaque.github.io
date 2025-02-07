@@ -14,7 +14,7 @@
 .logo-link {
     display: block;
     position: relative;
-    z-index: 10; /* Keeps the logo above other elements */
+    z-index: 10; /* Keeps the logo above dropdown */
 }
 
 .logo {
@@ -33,7 +33,7 @@
     margin-left: 100px;
 }
 
-/* Navigation Buttons with Smooth Top Border Animation */
+/* Navigation Buttons - Plain White Text */
 .nav-btn {
     background: transparent;
     color: white;
@@ -42,14 +42,14 @@
     font-size: 16px;
     cursor: pointer;
     position: relative;
-    transition: color 0.3s ease-in-out;
 }
 
-.nav-btn::after {
+/* Top Border Animation */
+.nav-btn::before {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -5px;
+    top: -5px; /* Placed above the button */
     width: 100%;
     height: 3px;
     background: white;
@@ -58,11 +58,7 @@
     transition: transform 0.3s ease-in-out;
 }
 
-.nav-btn:hover {
-    color: #FFD700; /* Optional hover color change */
-}
-
-.nav-btn:hover::after {
+.nav-btn:hover::before {
     transform: scaleX(1);
 }
 
@@ -71,29 +67,26 @@
     position: relative;
 }
 
+/* Full-Width Dropdown Panel */
 .dropdown-content {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    width: calc(100vw - 40px); /* Full width, avoiding logo overlap */
+    width: 100%; /* Full width of the header */
     background: rgba(10, 40, 60, 0.9);
-    padding: 10px 20px;
+    padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     z-index: 5;
 }
 
-/* Links inside dropdown */
+/* Align Dropdown Menu Below "Nature Chronicles" */
 .dropdown-content a {
     display: block;
     color: white;
-    padding: 10px;
+    padding: 10px 20px;
     text-decoration: none;
-    transition: background 0.3s;
-}
-
-.dropdown-content a:hover {
-    background: rgba(255, 255, 255, 0.2);
+    text-align: left;
 }
 
 /* Show dropdown on hover */
