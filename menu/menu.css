@@ -15,26 +15,25 @@
 
 /* Logo Styling */
 .logo-link {
-    display: flex;
-    align-items: center;
+    display: block;
+    position: relative;
+    z-index: 10; /* Keeps the logo above dropdown */
 }
 
 .logo {
-    height: 50px; /* Adjusted to match header height */
-    position: relative; /* Changed from absolute to relative */
-    left: 0;
-    bottom: 0;
+    height: 70px;
+    position: absolute;
+    bottom: -60px;
+    left: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Navigation Container */
 .nav-container {
     display: flex;
-    gap: 12px;
     align-items: center;
-    flex-direction: row;
-    margin-left: auto; /* Pushes nav to the right */
-    flex-grow: 1; /* Ensures navigation items don't get pushed under */
+    gap: 20px; /* Space between logo and buttons */
+    margin-left: 100px; /* Push nav right so it doesn't overlap the logo */
 }
 
 /* Navigation Buttons */
