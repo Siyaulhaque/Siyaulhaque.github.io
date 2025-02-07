@@ -99,6 +99,7 @@
 
 /* Show dropdown with smooth effect */
 .dropdown:hover .dropdown-content {
+    opacity: 1;
     visibility: visible;
     transform: translateY(0);
 }
