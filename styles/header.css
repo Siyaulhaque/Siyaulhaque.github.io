@@ -45,21 +45,22 @@
     transition: color 0.3s ease-in-out;
 }
 
-/* Underline Animation */
-.nav-btn::after {
+/* Top Border Animation */
+.nav-btn::before {
     content: "";
     position: absolute;
-    left: 50%;
-    bottom: -5px; /* Distance from the text */
-    width: 0;
-    height: 2px;
-    background-color: white;
-    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+    left: 0;
+    top: -5px; /* Placed above the button */
+    width: 100%;
+    height: 3px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
 }
 
-.nav-btn:hover::after {
-    width: 100%;
-    left: 0;
+.nav-btn:hover::before {
+    transform: scaleX(1);
 }
 
 /* Dropdown Menu */
@@ -73,7 +74,7 @@
     top: 100%;
     left: 0;
     width: 100%; /* Full width */
-    background: rgba(10, 40, 60, 0.95);
+    background: rgba(10, 40, 60, 1);
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     opacity: 0;
@@ -90,6 +91,7 @@
     padding: 12px 20px;
     text-decoration: none;
     font-size: 14px;
+    text-align: left;
     transition: color 0.3s ease-in-out;
 }
 
