@@ -4,48 +4,42 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Me!</title>
+    <link rel="stylesheet" href="styles/header.css">
     <link rel="stylesheet" href="styles/contact.css">
-    <link rel="stylesheet" href="menu/menu.css">
 </head>
 <body>
-    
-    <!-- Simple Header Panel -->
-    <header class="header">
-        <a href="index.html" class="logo-link">
-            <img src="page-image-elements/logo.png" alt="Logo" class="logo">
-        </a>
-        <nav class="nav-container">
-            <button class="nav-btn" onclick="window.location.href='Nature Chronicles.html'">Nature Chronicles</button>
-            <button class="nav-btn" onclick="window.location.href='aboutme.html'">About Me</button>
-            <button class="nav-btn" onclick="window.location.href='contact.html'">Contact</button>
-        </nav>
-    </header>
-    
-    <div class="contact-container">
-    <h1>Contact</h1>
 
-    <!-- Google Form Embed -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeK-uKP2svxfL-ql2ju9q-GaP2Yr4vUqoNtus9MK0YVX0Z_WQ/viewform?embedded=true" width="640" height="849" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
-            
-        <div class="social-section">
-            <h2>Connect with Me</h2>
-            <div class="social-links">
-                <a href="https://commons.wikimedia.org/wiki/User:yourprofile" target="_blank">Wikimedia Commons</a>
-                <a href="https://www.inaturalist.org/people/yourprofile" target="_blank">iNaturalist</a>
-                <a href="https://ebird.org/profile/yourprofile" target="_blank">eBird</a>
-                <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
-                <a href="https://instagram.com/zia.voo" target="_blank">Instagram</a>
-            </div>
+    <!-- Header Container -->
+    <div id="header-container"></div>
+
+    <div class="contact-container">
+        <h1>Contact</h1>
+
+        <!-- Google Form Embed -->
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeK-uKP2svxfL-ql2ju9q-GaP2Yr4vUqoNtus9MK0YVX0Z_WQ/viewform?embedded=true" 
+                width="640" height="849" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    </div>
+
+    <div class="social-section">
+        <h2>Connect with Me</h2>
+        <div class="social-links">
+            <a href="https://commons.wikimedia.org/wiki/User:yourprofile" target="_blank">Wikimedia Commons</a>
+            <a href="https://www.inaturalist.org/people/yourprofile" target="_blank">iNaturalist</a>
+            <a href="https://ebird.org/profile/yourprofile" target="_blank">eBird</a>
+            <a href="https://github.com/yourprofile" target="_blank">GitHub</a>
+            <a href="https://instagram.com/zia.voo" target="_blank">Instagram</a>
         </div>
     </div>
-    
+
     <footer class="footer">
-    <a href="index.html">
-        <img src="page-image-elements/echoes-banner.png" alt="Home" class="footer-banner">
-    </a>
-    <p class="footer-text">© 2025 Echoes of the Frog</p>
+        <a href="index.html">
+            <img src="page-image-elements/echoes-banner.png" alt="Home" class="footer-banner">
+        </a>
+        <p class="footer-text">© 2025 Echoes of the Frog</p>
     </footer>
+
+    <!-- Load Header Script -->
+    <script src="scripts/header.js"></script>
 
 </body>
 </html>
