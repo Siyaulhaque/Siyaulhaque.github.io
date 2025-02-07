@@ -47,6 +47,7 @@
     transition: color 0.3s ease, transform 0.3s ease-in-out, background 0.3s ease-in-out;
     padding: 8px 14px;
     border-radius: 8px;
+    position: relative; /* Ensure ::before animation works */
 }
 
 .nav-btn:hover {
@@ -100,6 +101,7 @@
     top: 100%;
     left: 0;
     width: 100%; /* Full width */
+    min-width: 150px; /* Prevents shrinking on small screens */
     background: rgba(10, 40, 60, 1);
     padding: 10px 0;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -130,6 +132,12 @@
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+}
+
+/* Non-Clickable Button (Nature Chronicles) */
+.nav-btn.static {
+    pointer-events: none; /* Disable clicking */
+    user-select: none; /* Prevent text selection */
 }
 
 /* Responsive Design */
