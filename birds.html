@@ -1,16 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
- <title>Light Bulb</title>
- <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Bulb</title>
+  <style>
+    body {
+      background-color: black; /* Set the background to black */
+      color: white; /* Set the text color to white so it stands out against the black background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .light-bulb {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .bulb {
+      width: 100px;
+      height: 150px;
+      border-radius: 50%;
+      background-color: #f0f0f0; /* Default bulb color */
+      margin-bottom: 10px;
+      transition: background-color 0.3s ease-in-out; /* Smooth color transition */
+    }
+
+    .filament {
+      width: 10px;
+      height: 50px;
+      background-color: #333; /* Dark color for the filament */
+      margin-top: -30px;
+    }
+
+    .base {
+      width: 50px;
+      height: 30px;
+      background-color: #777;
+      border-radius: 5px;
+    }
+
+    button {
+      background-color: #444;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background-color: #555;
+    }
+  </style>
 </head>
 <body>
- <div class="light-bulb">
- <div class="bulb"></div>
- <div class="filament"></div>
- <div class="base"></div>
- </div>
- <button id="switch">Switch</button>
- <script src="script.js"></script>
+
+  <div class="light-bulb">
+    <div class="bulb"></div>
+    <div class="filament"></div>
+    <div class="base"></div>
+  </div>
+  <button id="switch">Switch</button>
+
+  <script>
+    document.getElementById("switch").addEventListener("click", function() {
+      var bulb = document.querySelector(".bulb");
+      // Toggle bulb color between yellow (on) and default (off)
+      bulb.style.backgroundColor = bulb.style.backgroundColor === "yellow" ? "#f0f0f0" : "yellow";
+    });
+  </script>
+
 </body>
 </html>
